@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlimentaBem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7072cd0f2a4deae7663fa62264f3148d6e6aac5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02fec574f87bcc30494745f01d028bc4051e8566")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlimentaBem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlimentaBem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
