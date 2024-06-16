@@ -1,4 +1,4 @@
 ﻿public interface ISoftDelete
 {
-    DateTimeOffset? deletedAt { get; set; }
+    DateTimeOffset? DeletedAt { get; set; }
 }
