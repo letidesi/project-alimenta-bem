@@ -6,6 +6,8 @@ appsettings.Development.json
 *.env
 appsettings.Development.json
 /obj
+.obj
+/Properties
 # Visual Studio Code
 .vscode/
 
@@ -26,7 +28,6 @@ appsettings.Development.json
 
 # Ignorar o arquivo launchSettings.json
 Properties/launchSettings.json
-
 
 # Build results
 debug
