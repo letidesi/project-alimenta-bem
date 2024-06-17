@@ -1,0 +1,51 @@
+appsettings.json
+appsettings.Development.json
+
+# Environment specifics
+*.key
+*.env
+appsettings.Development.json
+/obj
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/settings.json
+/src/.env
+/src/env
+
+# Ignorar o arquivo launchSettings.json
+Properties/launchSettings.json
+
+
+# Build results
+debug
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og
+
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# Mono auto generated files
+mono_crash.*
