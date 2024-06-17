@@ -25,7 +25,7 @@ public class AcceptLanguageHeaderOperationProcessor : IOperationProcessor
     {
         var parameter = new OpenApiParameter
         {
-            Name = "Accept-Language",
+            Name = "accept-language",
             Kind = OpenApiParameterKind.Header,
             Description = "Language preference for the response.",
             IsRequired = false,

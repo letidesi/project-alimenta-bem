@@ -14,7 +14,7 @@ public class Localizer
     {
         _httpContextAccessor = httpContextAccessor;
 
-        if (useBase) PopulateLocalization("Languages");
+        if (useBase) PopulateLocalization("languages");
         if (additionalPaths == null) return;
 
         foreach (var additional in additionalPaths)
@@ -107,7 +107,7 @@ public class Localizer
     private string GetDefaultCulture()
     {
         var request = _httpContextAccessor.HttpContext.Request;
-        var acceptLanguageHeader = request.Headers["Accept-Language"].ToString();
+        var acceptLanguageHeader = request.Headers["accept-language"].ToString();
 
         if (string.IsNullOrEmpty(acceptLanguageHeader))
             return CultureInfo.CurrentCulture.Name;
