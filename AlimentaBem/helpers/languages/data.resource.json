@@ -1,0 +1,100 @@
+[
+    {
+        "Key": "EmailRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter email is required!",
+            "pt-BR": "O parâmetro email é obrigatório!"
+        }
+    },
+    {
+        "Key": "NameRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter name is required!",
+            "pt-BR": "O parâmetro nome é obrigatório!"
+        }
+    },
+    {
+        "Key": "FormatOfEmailAddress",
+        "LocalizedValues": {
+            "en-US": "The format of your email address is wrong!",
+            "pt-BR": "O formato do seu endereço de e-mais está errado!"
+        }
+    },
+    {
+        "Key": "EmailInvalid",
+        "LocalizedValues": {
+            "en-US": "Invalid email format!",
+            "pt-BR": "Formato de email inválido!"
+        }
+    },
+    {
+        "Key": "UserIdRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter user id is required!",
+            "pt-BR": "O parâmetro id do usuário é obrigatório!"
+        }
+    },
+    {
+        "Key": "PasswordRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter password is required!",
+            "pt-BR": "O parâmetro senha é obrigatório!"
+        }
+    },
+    {
+        "Key": "PasswordShort",
+        "LocalizedValues": {
+            "en-US": "Password is too short!",
+            "pt-BR": "A senha está muito curta!"
+        }
+    },
+    {
+        "Key": "PasswordLong",
+        "LocalizedValues": {
+            "en-US": "Password is too long!",
+            "pt-BR": "A senha está muito grande!"
+        }
+    },
+    {
+        "Key": "LoginInvalid",
+        "LocalizedValues": {
+            "en-US": "Invalid username or password.",
+            "pt-BR": "Nome de usuário ou senha inválido."
+        }
+    },
+    {
+        "Key": "UserNotFound",
+        "LocalizedValues": {
+            "en-US": "The user could not be found.",
+            "pt-BR": "Não foi possível encontrar o usuário."
+        }
+    },
+    {
+        "Key": "UserEmailNotFound",
+        "LocalizedValues": {
+            "en-US": "The email of user could not be found.",
+            "pt-BR": "Não foi possível encontrar o e-mail do usuário."
+        }
+    },
+    {
+        "Key": "UserSameEmail",
+        "LocalizedValues": {
+            "en-US": "User with the same email already exists.",
+            "pt-BR": "Este e-mail já foi registrado."
+        }
+    },
+    {
+        "Key": "UserNotAllowedUpdateEmail",
+        "LocalizedValues": {
+            "en-US": "Not allowed to update to this email.",
+            "pt-BR": "Não é permitido atualizar este e-mail."
+        }
+    },
+    {
+        "Key": "UserNotAllowedUpdatePasswordIncorrect",
+        "LocalizedValues": {
+            "en-US": "Not allowed to update to this data, password incorrect.",
+            "pt-BR": "Não é permitido atualizar estes dados, senha incorreta."
+        }
+    }
+]
