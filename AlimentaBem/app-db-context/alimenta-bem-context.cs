@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using alimenta.bem.entity.metadata;
 using alimenta.bem.user.repository;
+using alimenta.bem.role.repository;
 
 namespace alimenta.bem.db.context;
 
@@ -11,6 +12,7 @@ public class AlimentaBemContext : DbContext
 
     #region 
     public DbSet<User> Users { get; set; }
+    public DbSet<Role> Roles { get; set; }
 
     // public DbSet<Beneficiary> Beneficiaries { get; set; }
 

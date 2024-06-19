@@ -2,57 +2,57 @@
     {
         "Key": "EmailRequired",
         "LocalizedValues": {
-            "en-US": "The parameter email is required!",
-            "pt-BR": "O parâmetro email é obrigatório!"
+            "en-US": "The parameter email is required.",
+            "pt-BR": "O parâmetro email é obrigatório."
         }
     },
     {
         "Key": "NameRequired",
         "LocalizedValues": {
-            "en-US": "The parameter name is required!",
-            "pt-BR": "O parâmetro nome é obrigatório!"
+            "en-US": "The parameter name is required.",
+            "pt-BR": "O parâmetro nome é obrigatório."
         }
     },
     {
         "Key": "FormatOfEmailAddress",
         "LocalizedValues": {
-            "en-US": "The format of your email address is wrong!",
-            "pt-BR": "O formato do seu endereço de e-mais está errado!"
+            "en-US": "The format of your email address is wrong.",
+            "pt-BR": "O formato do seu endereço de e-mais está errado."
         }
     },
     {
         "Key": "EmailInvalid",
         "LocalizedValues": {
-            "en-US": "Invalid email format!",
-            "pt-BR": "Formato de email inválido!"
+            "en-US": "Invalid email format.",
+            "pt-BR": "Formato de email inválido."
         }
     },
     {
         "Key": "UserIdRequired",
         "LocalizedValues": {
-            "en-US": "The parameter user id is required!",
-            "pt-BR": "O parâmetro id do usuário é obrigatório!"
+            "en-US": "The parameter user id is required.",
+            "pt-BR": "O parâmetro id do usuário é obrigatório."
         }
     },
     {
         "Key": "PasswordRequired",
         "LocalizedValues": {
-            "en-US": "The parameter password is required!",
-            "pt-BR": "O parâmetro senha é obrigatório!"
+            "en-US": "The parameter password is required.",
+            "pt-BR": "O parâmetro senha é obrigatório."
         }
     },
     {
         "Key": "PasswordShort",
         "LocalizedValues": {
-            "en-US": "Password is too short!",
-            "pt-BR": "A senha está muito curta!"
+            "en-US": "Password is too short.",
+            "pt-BR": "A senha está muito curta."
         }
     },
     {
         "Key": "PasswordLong",
         "LocalizedValues": {
-            "en-US": "Password is too long!",
-            "pt-BR": "A senha está muito grande!"
+            "en-US": "Password is too long.",
+            "pt-BR": "A senha está muito grande."
         }
     },
     {
@@ -95,6 +95,20 @@
         "LocalizedValues": {
             "en-US": "Not allowed to update to this data, password incorrect.",
             "pt-BR": "Não é permitido atualizar estes dados, senha incorreta."
+        }
+    },
+    {
+        "Key": "RoleCreationFailed",
+        "LocalizedValues": {
+            "en-US": "It was not possible to create the role entity.",
+            "pt-BR": "Não foi possível criar a entidade de cargo."
+        }
+    },
+    {
+        "Key": "InvalidTypeParameter",
+        "LocalizedValues": {
+            "en-US": "Parameter \"Type\" is invalid.",
+            "pt-BR": "O parâmetro \"Type\" é inválido."
         }
     }
 ]
