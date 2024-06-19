@@ -1,6 +1,5 @@
 using alimenta.bem.helpers;
 using alimenta.bem.db.context;
-using Microsoft.EntityFrameworkCore;
 
 namespace alimenta.bem.user.repository;
 
