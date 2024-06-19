@@ -5,16 +5,19 @@ namespace alimenta.bem.data.mappings.user;
 
 public class UserMap : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
-    {
-        builder.HasKey(u => u.Id);
-        builder.Property(u => u.Name)
-               .HasColumnType("varchar(100)");
-        builder.Property(u => u.Email)
-              .HasColumnType("varchar(100)");
-        builder.Property(u => u.Name)
-               .HasColumnType("varchar(100)");
-        builder.Property(u => u.PasswordHash)
-               .HasColumnType("varchar(max)");
-    }
+       public void Configure(EntityTypeBuilder<User> builder)
+       {
+              builder.HasKey(u => u.Id);
+              builder.Property(u => u.Name)
+                     .HasColumnType("varchar(100)");
+              builder.Property(u => u.Email)
+                    .HasColumnType("varchar(100)");
+              builder.Property(u => u.Name)
+                     .HasColumnType("varchar(100)");
+              builder.Property(u => u.PasswordHash)
+                     .HasColumnType("varchar(max)");
+              builder.HasMany(u => u.Roles)
+                     .WithOne(r => r.User)
+                     .HasForeignKey(r => r.UserId);
+       }
 }
