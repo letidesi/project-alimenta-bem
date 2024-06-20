@@ -7,7 +7,7 @@ using System.IdentityModel.Tokens.Jwt;
 using alimenta.bem.user.repository;
 using alimenta.bem.role.repository;
 
-namespace alimenta.bem.modules.providers;
+namespace alimenta.bem.providers;
 
 public class CryptoService : ICryptoProvider
 {
@@ -108,7 +108,7 @@ public class CryptoService : ICryptoProvider
 
     private IDictionary<string, object> RolesIntoClaim(ICollection<Role> roles)
     {
-        var rolesArray = roles.Select(roles => roles.Type);
+        var rolesArray = roles.Select(roles => roles.Type).ToList();
 
         return new Dictionary<string, object>(){
             { "roles", rolesArray },

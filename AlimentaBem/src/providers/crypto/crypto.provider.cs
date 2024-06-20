@@ -1,7 +1,7 @@
 using Microsoft.IdentityModel.Tokens;
 using alimenta.bem.user.repository;
 
-namespace alimenta.bem.modules.providers;
+namespace alimenta.bem.providers;
 
 public interface ICryptoProvider
 {
