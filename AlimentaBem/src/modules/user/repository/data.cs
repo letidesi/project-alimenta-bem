@@ -25,6 +25,7 @@ public class UserData : IUserData
     public async Task<User?> ReadOneByEmail(string email)
     {
         var user = await _context.Users
+            .Include(u => u.Roles)
             .Where(u => u.Email.Equals(email))
             .Where(u => u.DeletedAt.Equals(null))
             .FirstOrDefaultAsync();
