@@ -1,8 +1,8 @@
 using alimenta.bem.helpers;
+using alimenta.bem.db.context;
 using alimenta.bem.modules.user.useCases.create.mapper;
 using alimenta.bem.modules.user.useCases.create.dto.request;
 using alimenta.bem.modules.user.useCases.create.dto.response;
-using alimenta.bem.db.context;
 using alimenta.bem.modules.user.useCases.create.useCase;
 
 namespace alimenta.bem.modules.user.useCases.create.endpoint;
@@ -14,7 +14,7 @@ public class UserCreateEndPoint : Endpoint<UserCreateRequest, UserCreateResponse
 
     public override void Configure()
     {
-        Post("users");
+        Post("user");
         Options(u => u.WithTags("user"));
         Summary(s =>
         {

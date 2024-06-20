@@ -17,14 +17,14 @@ public class Validator : Validator<UserCreateRequest>
             .NotEmpty()
             .WithMessage(_localizer["data:EmailRequired"])
             .EmailAddress()
-            .WithMessage(_localizer["date:FormatOfEmailAddress"]);
+            .WithMessage(_localizer["data:FormatOfEmailAddress"]);
 
         RuleFor(request => request.Password)
             .NotEmpty()
-            .WithMessage(_localizer["date:PasswordRequired"])
+            .WithMessage(_localizer["data:PasswordRequired"])
             .MinimumLength(6)
-            .WithMessage(_localizer["date:PasswordShort"])
+            .WithMessage(_localizer["data:PasswordShort"])
             .MaximumLength(25)
-            .WithMessage(_localizer["date:PasswordLong"]);
+            .WithMessage(_localizer["data:PasswordLong"]);
     }
 }
