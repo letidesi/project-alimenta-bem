@@ -14,7 +14,7 @@ public class RoleCreateEndPoint : Endpoint<RoleCreateRequest, RoleCreateResponse
 
     public override void Configure()
     {
-        Post("users");
+        Post("role");
         Options(u => u.WithTags("role"));
         Roles("Admin, Developer");
         Summary(s =>
