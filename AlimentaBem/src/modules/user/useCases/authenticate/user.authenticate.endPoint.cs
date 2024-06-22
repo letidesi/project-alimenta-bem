@@ -1,11 +1,11 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
-using alimenta.bem.modules.user.useCases.create.mapper;
-using alimenta.bem.modules.user.useCases.authenticate.dto.request;
-using alimenta.bem.modules.user.useCases.authenticate.dto.response;
-using alimenta.bem.modules.user.useCases.authenticate.useCase;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
+using alimenta_bem.src.modules.user.useCases.authenticate.mapper;
+using alimenta_bem.src.modules.user.useCases.authenticate.dto.request;
+using alimenta_bem.src.modules.user.useCases.authenticate.dto.response;
+using alimenta_bem.src.modules.user.useCases.authenticate.UseCase;
 
-namespace alimenta.bem.modules.user.useCases.authenticate.endpoint;
+namespace alimenta_bem.src.modules.user.useCases.authenticate.endPoint;
 
 public class UserAuthenticateEndPoint : Endpoint<UserAuthenticateRequest, UserAuthenticateResponse, UserAuthenticateMapper>
 {

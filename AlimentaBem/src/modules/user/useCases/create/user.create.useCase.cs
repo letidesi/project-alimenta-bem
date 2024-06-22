@@ -1,8 +1,8 @@
-using alimenta.bem.db.context;
-using alimenta.bem.helpers;
-using alimenta.bem.user.repository;
+using alimenta_bem.db.context;
+using alimenta_bem.helpers;
+using alimenta_bem.src.modules.user.repository;
 
-namespace alimenta.bem.modules.user.useCases.create.useCase;
+namespace alimenta_bem.src.modules.user.useCases.create.useCase;
 
 public class UserCreateUseCase
 {

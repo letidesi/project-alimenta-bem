@@ -1,8 +1,8 @@
 using alimenta.bem.entity.metadata;
-using alimenta.bem.natural.person.repository;
-using alimenta.bem.role.repository;
+using alimenta_bem.src.modules.role.repository;
+using alimenta_bem.src.natural.person.repository;
 
-namespace alimenta.bem.user.repository;
+namespace alimenta_bem.src.modules.user.repository;
 
 public class User : BaseEntity
 {

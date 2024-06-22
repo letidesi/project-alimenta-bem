@@ -1,11 +1,11 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
-using alimenta.bem.modules.user.useCases.create.mapper;
-using alimenta.bem.modules.user.useCases.create.dto.request;
-using alimenta.bem.modules.user.useCases.create.dto.response;
-using alimenta.bem.modules.user.useCases.create.useCase;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
+using alimenta_bem.src.modules.user.useCases.create.mapper;
+using alimenta_bem.src.modules.user.useCases.create.dto.request;
+using alimenta_bem.src.modules.user.useCases.create.dto.response;
+using alimenta_bem.src.modules.user.useCases.create.useCase;
 
-namespace alimenta.bem.modules.user.useCases.create.endpoint;
+namespace alimenta_bem.src.modules.user.useCases.create.endPoint;
 
 public class UserCreateEndPoint : Endpoint<UserCreateRequest, UserCreateResponse, UserCreateMapper>
 {

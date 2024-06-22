@@ -1,4 +1,4 @@
-namespace alimenta.bem.modules.user.useCases.authenticate.dto.response;
+namespace alimenta_bem.src.modules.user.useCases.authenticate.dto.response;
 
 public class UserAuthenticateResponse
 {

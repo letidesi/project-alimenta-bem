@@ -1,9 +1,9 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
-using alimenta.bem.user.repository;
-using alimenta.bem.modules.user.useCases.authenticate.dto.request;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
+using alimenta_bem.src.modules.user.repository;
+using alimenta_bem.src.modules.user.useCases.authenticate.dto.request;
 
-namespace alimenta.bem.modules.user.useCases.authenticate.useCase;
+namespace alimenta_bem.src.modules.user.useCases.authenticate.UseCase;
 
 public class UserAuthenticateUseCase
 {

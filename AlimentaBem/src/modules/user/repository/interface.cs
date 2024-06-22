@@ -1,4 +1,4 @@
-namespace alimenta.bem.user.repository;
+namespace alimenta_bem.src.modules.user.repository;
 
 public interface IUserData
 {

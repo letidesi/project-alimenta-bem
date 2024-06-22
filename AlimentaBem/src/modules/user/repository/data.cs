@@ -1,7 +1,7 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
 
-namespace alimenta.bem.user.repository;
+namespace alimenta_bem.src.modules.user.repository;
 
 public class UserData : IUserData
 {

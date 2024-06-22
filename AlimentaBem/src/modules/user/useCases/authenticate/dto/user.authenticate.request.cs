@@ -1,4 +1,4 @@
-namespace alimenta.bem.modules.user.useCases.authenticate.dto.request;
+namespace alimenta_bem.src.modules.user.useCases.authenticate.dto.request;
 
 public class UserAuthenticateRequest
 {

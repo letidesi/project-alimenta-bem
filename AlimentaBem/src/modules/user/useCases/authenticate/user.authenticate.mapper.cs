@@ -1,8 +1,8 @@
-using alimenta.bem.providers;
-using alimenta.bem.user.repository;
-using alimenta.bem.modules.user.useCases.authenticate.dto.response;
+using alimenta_bem.src.providers.crypto;
+using alimenta_bem.src.modules.user.repository;
+using alimenta_bem.src.modules.user.useCases.authenticate.dto.response;
 
-namespace alimenta.bem.modules.user.useCases.create.mapper;
+namespace alimenta_bem.src.modules.user.useCases.authenticate.mapper;
 
 public class UserAuthenticateMapper : ResponseMapper<UserAuthenticateResponse, User>
 {

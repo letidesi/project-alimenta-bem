@@ -1,9 +1,9 @@
-using alimenta.bem.helpers;
-using alimenta.bem.user.repository;
-using alimenta.bem.modules.user.useCases.create.dto.request;
-using alimenta.bem.modules.user.useCases.create.dto.response;
+using alimenta_bem.helpers;
+using alimenta_bem.src.modules.user.useCases.create.dto.request;
+using alimenta_bem.src.modules.user.useCases.create.dto.response;
+using alimenta_bem.src.modules.user.repository;
 
-namespace alimenta.bem.modules.user.useCases.create.mapper;
+namespace alimenta_bem.src.modules.user.useCases.create.mapper;
 
 public class UserCreateMapper : Mapper<UserCreateRequest, UserCreateResponse, User>
 {

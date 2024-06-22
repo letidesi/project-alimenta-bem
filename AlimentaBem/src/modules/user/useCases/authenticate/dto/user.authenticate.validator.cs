@@ -1,7 +1,7 @@
-using alimenta.bem.helpers;
-using alimenta.bem.modules.user.useCases.authenticate.dto.request;
+using alimenta_bem.helpers;
+using alimenta_bem.src.modules.user.useCases.authenticate.dto.request;
 
-namespace alimenta.bem.modules.user.useCases.authenticate.dto.validator;
+namespace alimenta_bem.src.modules.user.useCases.authenticate.dto.validator;
 
 public class Validator : Validator<UserAuthenticateRequest>
 {
