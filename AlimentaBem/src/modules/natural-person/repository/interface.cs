@@ -1,4 +1,4 @@
-namespace alimenta.bem.natural.person.repository;
+namespace alimenta_bem.src.natural.person.repository;
 
 public interface INaturalPersonData
 {

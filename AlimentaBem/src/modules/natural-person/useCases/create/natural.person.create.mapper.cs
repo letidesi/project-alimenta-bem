@@ -1,8 +1,8 @@
-using alimenta.bem.natural.person.repository;
-using alimenta.bem.modules.natural.person.useCases.create.dto.request;
-using alimenta.bem.modules.natural.person.useCases.create.dto.response;
+using alimenta_bem.src.natural.person.repository;
+using alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
+using alimenta_bem.src.modules.natural.person.useCases.create.dto.response;
 
-namespace alimenta.bem.modules.natural.person.useCases.create.mapper;
+namespace alimenta.bem.src.modules.natural.person.useCases.create.mapper;
 
 public class UserCreateMapper : Mapper<NaturalPersonCreateRequest, NaturalPersonCreateResponse, NaturalPerson>
 {

@@ -1,7 +1,7 @@
 using alimenta.bem.entity.metadata;
-using alimenta.bem.user.repository;
+using alimenta_bem.src.modules.user.repository;
 
-namespace alimenta.bem.natural.person.repository;
+namespace alimenta_bem.src.natural.person.repository;
 
 public class NaturalPerson : BaseEntity
 {

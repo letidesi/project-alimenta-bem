@@ -1,11 +1,11 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
-using alimenta.bem.modules.natural.person.useCases.create.mapper;
-using alimenta.bem.modules.natural.person.useCases.create.dto.request;
-using alimenta.bem.modules.natural.person.useCases.create.dto.response;
-using alimenta.bem.modules.natural.person.useCases.create.useCase;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
+using alimenta.bem.src.modules.natural.person.useCases.create.mapper;
+using alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
+using alimenta_bem.src.modules.natural.person.useCases.create.dto.response;
+using alimenta_bem.src.modules.natural.person.useCases.create.useCase;
 
-namespace alimenta.bem.modules.natural.person.useCases.create.endpoint;
+namespace alimenta_bem.src.modules.natural.person.useCases.create.endpoint;
 
 public class UserCreateEndPoint : Endpoint<NaturalPersonCreateRequest, NaturalPersonCreateResponse, UserCreateMapper>
 {
@@ -15,7 +15,8 @@ public class UserCreateEndPoint : Endpoint<NaturalPersonCreateRequest, NaturalPe
     public override void Configure()
     {
         Post("natural-person");
-        Options(u => u.WithTags("natural-person"));
+        Roles("Admin", "Developer");
+        Options(n => n.WithTags("natural-person"));
         Summary(s =>
         {
             s.Summary = "Create a new natural person";

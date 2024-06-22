@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace alimenta.bem.modules.natural.person.useCases.create.dto.request;
+namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
 
 public class NaturalPersonCreateRequest
 {

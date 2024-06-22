@@ -1,6 +1,6 @@
 using alimenta.bem.entity.metadata;
 
-namespace alimenta.bem.modules.natural.person.useCases.create.dto.response;
+namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.response;
 
 public class NaturalPersonCreateResponse : BaseEntity
 {

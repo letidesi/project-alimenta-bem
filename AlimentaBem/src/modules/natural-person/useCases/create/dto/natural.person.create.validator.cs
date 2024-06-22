@@ -1,7 +1,7 @@
-using alimenta.bem.helpers;
-using alimenta.bem.modules.natural.person.useCases.create.dto.request;
+using alimenta_bem.helpers;
+using alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
 
-namespace alimenta.bem.modules.natural.person.useCases.create.dto.validator;
+namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.validator;
 
 public class Validator : Validator<NaturalPersonCreateRequest>
 {

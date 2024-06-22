@@ -1,8 +1,8 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
-using alimenta.bem.natural.person.repository;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
+using alimenta_bem.src.natural.person.repository;
 
-namespace alimenta.bem.modules.natural.person.useCases.create.useCase;
+namespace alimenta_bem.src.modules.natural.person.useCases.create.useCase;
 
 public class NaturalPersonCreateUseCase
 {
