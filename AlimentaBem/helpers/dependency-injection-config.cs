@@ -1,5 +1,5 @@
-using alimenta.bem.helpers;
-using alimenta.bem.providers;
+using alimenta_bem.helpers;
+using alimenta_bem.src.providers.crypto;
 
 public static class DependencyInjectionConfig
 {
