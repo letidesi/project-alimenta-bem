@@ -1,9 +1,9 @@
 global using FastEndpoints;
 global using FluentValidation;
 global using Microsoft.EntityFrameworkCore;
-using alimenta.bem.helpers;
+using alimenta_bem.helpers;
 using FastEndpoints.Security;
-using alimenta.bem.db.context;
+using alimenta_bem.db.context;
 using Microsoft.Extensions.Options;
 using System.Text.Json.Serialization;
 
