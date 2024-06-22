@@ -2,6 +2,7 @@ using System.Linq.Expressions;
 using alimenta.bem.entity.metadata;
 using alimenta.bem.user.repository;
 using alimenta.bem.role.repository;
+using alimenta.bem.natural.person.repository;
 
 namespace alimenta.bem.db.context;
 
@@ -11,8 +12,9 @@ public class AlimentaBemContext : DbContext
     public AlimentaBemContext(DbContextOptions options) : base(options) { }
 
     #region 
-    public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<NaturalPerson> NaturalPersons { get; set; }
 
     // public DbSet<Beneficiary> Beneficiaries { get; set; }
 
