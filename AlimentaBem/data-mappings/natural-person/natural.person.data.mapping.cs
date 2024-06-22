@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using alimenta.bem.natural.person.repository;
+using alimenta_bem.src.natural.person.repository;
 
-namespace alimenta.bem.data.mappings.natural.person;
+namespace alimenta_bem.data.mappings.natural.person;
 
 public class NaturalPersonMap : IEntityTypeConfiguration<NaturalPerson>
 {
