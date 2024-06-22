@@ -1,7 +1,7 @@
-using alimenta.bem.db.context;
-using alimenta.bem.natural.person.repository;
+using alimenta_bem.db.context;
+using alimenta_bem.src.natural.person.repository;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class ValidateNaturalPersonData
 {

@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class Is_Valid_Email_Function
 {

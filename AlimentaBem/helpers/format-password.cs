@@ -1,4 +1,4 @@
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class FormatPassword
 {

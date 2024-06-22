@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class StringUtility
 {

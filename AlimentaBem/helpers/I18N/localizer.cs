@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using System.Globalization;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class Localizer
 {

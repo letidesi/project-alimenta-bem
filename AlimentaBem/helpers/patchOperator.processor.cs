@@ -3,7 +3,7 @@ using NJsonSchema;
 using NSwag.Generation.Processors;
 using NSwag.Generation.Processors.Contexts;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 public class PatchOperationProcessor : IOperationProcessor
 {
     public bool Process(OperationProcessorContext context)

@@ -4,7 +4,7 @@ using NSwag.Generation.Processors;
 using Microsoft.Extensions.Options;
 using NSwag.Generation.Processors.Contexts;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class AcceptLanguageHeaderOperationProcessor : IOperationProcessor
 {

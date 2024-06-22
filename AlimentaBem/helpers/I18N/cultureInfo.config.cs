@@ -1,7 +1,7 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public static class CultureInfoConfig
 {
