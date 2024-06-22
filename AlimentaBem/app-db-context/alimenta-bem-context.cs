@@ -1,10 +1,10 @@
 using System.Linq.Expressions;
 using alimenta.bem.entity.metadata;
-using alimenta.bem.user.repository;
-using alimenta.bem.role.repository;
-using alimenta.bem.natural.person.repository;
+using alimenta_bem.src.modules.role.repository;
+using alimenta_bem.src.modules.user.repository;
+using alimenta_bem.src.natural.person.repository;
 
-namespace alimenta.bem.db.context;
+namespace alimenta_bem.db.context;
 
 public class AlimentaBemContext : DbContext
 {
