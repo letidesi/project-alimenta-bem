@@ -12,7 +12,7 @@ public class Validator : Validator<RoleCreateRequest>
 
         RuleFor(request => request.UserId)
            .NotEmpty()
-           .WithMessage(_localizer["data:UserIdRequired"]);
+           .WithMessage(_localizer["user:UserIdRequired"]);
 
         RuleFor(request => request.Type)
              .IsEnumName(typeof(EnumRole))

@@ -17,10 +17,10 @@ public class Validator : Validator<UserAuthenticateRequest>
 
         RuleFor(request => request.Password)
             .NotEmpty()
-            .WithMessage(_localizer["data:PasswordRequired"])
+            .WithMessage(_localizer["user:PasswordRequired"])
             .MinimumLength(6)
-            .WithMessage(_localizer["data:PasswordShort"])
+            .WithMessage(_localizer["user:PasswordShort"])
             .MaximumLength(25)
-            .WithMessage(_localizer["data:PasswordLong"]);
+            .WithMessage(_localizer["user:PasswordLong"]);
     }
 }

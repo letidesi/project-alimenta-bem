@@ -18,7 +18,7 @@ public class UserAuthenticateUseCase
     public async Task<User> exec(UserAuthenticateRequest request)
     {
         var user = await _user_data.ReadOneByEmail(request.Email);
-        if (user is null) throw new Exception(_localizer["data:UserNotFound"]);
+        if (user is null) throw new Exception(_localizer["user:UserNotFound"]);
 
         var passwordIsValid = FormatPassword.ComparePassword(request.Password, user.PasswordHash);
         if (!passwordIsValid)

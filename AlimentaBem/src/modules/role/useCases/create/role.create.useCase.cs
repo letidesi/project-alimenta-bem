@@ -18,7 +18,7 @@ public class RoleCreateUseCase
     {
         var create_role = await _role_data.Create(role);
 
-        if (create_role is null) throw new Exception(_localizer["data:RoleCreationFailed"]);
+        if (create_role is null) throw new Exception(_localizer["role:RoleCreationFailed"]);
 
         return create_role;
     }
