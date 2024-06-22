@@ -23,7 +23,7 @@ public class UserCreateUseCase
 
         var existing_user = await _user_data.ReadOneByEmail(user.Email);
         if (existing_user is not null)
-            throw new Exception(_localizer["data:UserSameEmail"]);
+            throw new Exception(_localizer["user:UserSameEmail"]);
 
         var create_user = await _user_data.Create(user);
         return create_user;

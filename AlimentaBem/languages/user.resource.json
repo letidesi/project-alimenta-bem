@@ -1,0 +1,72 @@
+[
+    {
+        "Key": "UserIdRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"UserId\" is required.",
+            "pt-BR": "O parâmetro \"UserId\" é obrigatório."
+        }
+    },
+    {
+        "Key": "PasswordRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"password\" is required.",
+            "pt-BR": "O parâmetro \"password\" é obrigatório."
+        }
+    },
+    {
+        "Key": "PasswordShort",
+        "LocalizedValues": {
+            "en-US": "The parameter \"password\" is too short.",
+            "pt-BR": "O parâmetro \"password\" está muito curta."
+        }
+    },
+    {
+        "Key": "PasswordLong",
+        "LocalizedValues": {
+            "en-US": "The parameter \"password\" is too long.",
+            "pt-BR": "O parâmetro \"password\" está muito grande."
+        }
+    },
+    {
+        "Key": "UserNotFound",
+        "LocalizedValues": {
+            "en-US": "The user could not be found.",
+            "pt-BR": "Não foi possível encontrar o usuário."
+        }
+    },
+    {
+        "Key": "UserEmailNotFound",
+        "LocalizedValues": {
+            "en-US": "The email of the user could not be found.",
+            "pt-BR": "Não foi possível encontrar o e-mail do usuário."
+        }
+    },
+    {
+        "Key": "UserSameEmail",
+        "LocalizedValues": {
+            "en-US": "A user with the same email already exists.",
+            "pt-BR": "Já existe um usuário com este e-mail registrado."
+        }
+    },
+    {
+        "Key": "UserNotAllowedUpdateEmail",
+        "LocalizedValues": {
+            "en-US": "Not allowed to update to this email.",
+            "pt-BR": "Não é permitido atualizar para este e-mail."
+        }
+    },
+    {
+        "Key": "UserNotAllowedUpdatePasswordIncorrect",
+        "LocalizedValues": {
+            "en-US": "Not allowed to update to this data, password incorrect.",
+            "pt-BR": "Não é permitido atualizar estes dados, senha incorreta."
+        }
+    },
+    {
+        "Key": "LoginInvalid",
+        "LocalizedValues": {
+            "en-US": "Invalid username or password.",
+            "pt-BR": "Nome de usuário ou senha inválido."
+        }
+    }
+]
