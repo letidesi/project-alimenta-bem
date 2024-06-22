@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using alimenta.bem.role.repository;
+using alimenta_bem.src.modules.role.repository;
 
-namespace alimenta.bem.data.mappings.role;
+namespace alimenta_bem.data.mappings.role;
 
 public class RoleMap : IEntityTypeConfiguration<Role>
 {
