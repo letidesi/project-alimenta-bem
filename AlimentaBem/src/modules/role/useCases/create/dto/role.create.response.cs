@@ -1,6 +1,6 @@
 using alimenta.bem.entity.metadata;
 
-namespace alimenta.bem.modules.role.useCases.create.dto.response;
+namespace alimenta_bem.src.modules.role.useCases.create.dto.response;
 
 public class RoleCreateResponse : BaseEntity
 {

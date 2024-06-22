@@ -1,8 +1,8 @@
-﻿namespace smc_backend.Modules.role.Enum;
+﻿namespace alimenta_bem.src.modules.role.@enum;
 
 public enum EnumRole
 {
-    Admin, 
-    Developer, 
+    Admin,
+    Developer,
     Citizen
 }

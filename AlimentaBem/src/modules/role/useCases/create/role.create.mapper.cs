@@ -1,9 +1,8 @@
-using alimenta.bem.helpers;
-using alimenta.bem.role.repository;
-using alimenta.bem.modules.role.useCases.create.dto.request;
-using alimenta.bem.modules.role.useCases.create.dto.response;
+using alimenta_bem.src.modules.role.repository;
+using alimenta_bem.src.modules.role.useCases.create.dto.request;
+using alimenta_bem.src.modules.role.useCases.create.dto.response;
 
-namespace alimenta.bem.modules.role.useCases.create.mapper;
+namespace alimenta_bem.src.modules.role.useCases.create.mapper;
 
 public class RoleCreateMapper : Mapper<RoleCreateRequest, RoleCreateResponse, Role>
 {

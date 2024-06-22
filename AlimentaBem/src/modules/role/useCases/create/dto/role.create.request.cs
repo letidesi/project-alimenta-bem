@@ -1,4 +1,4 @@
-namespace alimenta.bem.modules.role.useCases.create.dto.request;
+namespace alimenta_bem.src.modules.role.useCases.create.dto.request;
 
 public class RoleCreateRequest
 {

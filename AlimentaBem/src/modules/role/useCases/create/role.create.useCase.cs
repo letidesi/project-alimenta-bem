@@ -1,8 +1,8 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
-using alimenta.bem.role.repository;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
+using alimenta_bem.src.modules.role.repository;
 
-namespace alimenta.bem.modules.role.useCases.create.useCase;
+namespace alimenta_bem.src.modules.role.useCases.create.useCase;
 
 public class RoleCreateUseCase
 {

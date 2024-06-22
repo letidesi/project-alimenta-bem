@@ -1,8 +1,8 @@
-using alimenta.bem.helpers;
-using smc_backend.Modules.role.Enum;
-using alimenta.bem.modules.role.useCases.create.dto.request;
+using alimenta_bem.helpers;
+using alimenta_bem.src.modules.role.@enum;
+using alimenta_bem.src.modules.role.useCases.create.dto.request;
 
-namespace alimenta.bem.modules.role.useCases.create.dto.validator;
+namespace alimenta_bem.modules.role.useCases.create.dto.validator;
 
 public class Validator : Validator<RoleCreateRequest>
 {

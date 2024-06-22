@@ -1,6 +1,4 @@
-using alimenta.bem.role.repository;
-
-namespace alimenta.bem.role.repository;
+namespace alimenta_bem.src.modules.role.repository;
 
 public interface IRoleData
 {

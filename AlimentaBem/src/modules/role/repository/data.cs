@@ -1,7 +1,7 @@
-using alimenta.bem.helpers;
-using alimenta.bem.db.context;
+using alimenta_bem.helpers;
+using alimenta_bem.db.context;
 
-namespace alimenta.bem.role.repository;
+namespace alimenta_bem.src.modules.role.repository;
 
 public class RoleData : IRoleData
 {
