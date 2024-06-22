@@ -1,6 +1,6 @@
 using alimenta.bem.entity.metadata;
 
-namespace alimenta.bem.helpers;
+namespace alimenta_bem.helpers;
 
 public class UserSummary : BaseEntity
 {

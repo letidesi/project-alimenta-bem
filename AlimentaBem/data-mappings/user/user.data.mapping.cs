@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using alimenta.bem.user.repository;
+using alimenta_bem.src.modules.user.repository;
 
-namespace alimenta.bem.data.mappings.user;
+namespace alimenta_bem.data.mappings.user;
 
 public class UserMap : IEntityTypeConfiguration<User>
 {
