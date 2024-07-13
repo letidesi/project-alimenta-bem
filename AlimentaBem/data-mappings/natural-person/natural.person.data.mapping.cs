@@ -7,32 +7,32 @@ public class NaturalPersonMap : IEntityTypeConfiguration<NaturalPerson>
 {
        public void Configure(EntityTypeBuilder<NaturalPerson> builder)
        {
-              builder.HasOne(n => n.User)
-                     .WithMany(u => u.NaturalPersons)
-                     .HasForeignKey(n => n.UserId);
-              builder.HasKey(n => n.Id);
-              builder.Property(n => n.FirstName)
+              builder.HasOne(n => n.user)
+                     .WithMany(u => u.naturalPersons)
+                     .HasForeignKey(n => n.userId);
+              builder.HasKey(n => n.id);
+              builder.Property(n => n.firstName)
                      .HasColumnType("varchar(100)");
-              builder.Property(n => n.LastName)
+              builder.Property(n => n.lastName)
                     .HasColumnType("varchar(100)");
-              builder.Property(n => n.SocialName)
+              builder.Property(n => n.socialName)
                      .HasColumnType("varchar(100)")
                      .IsRequired(false);
-              builder.Property(n => n.Cpf)
+              builder.Property(n => n.cpf)
                      .HasColumnType("varchar(100)");
-              builder.Property(n => n.Rg)
+              builder.Property(n => n.rg)
                      .HasColumnType("varchar(100)");
-              builder.Property(n => n.Age)
+              builder.Property(n => n.age)
                      .HasColumnType("varchar(50)");
-              builder.Property(n => n.BirthdayDate)
+              builder.Property(n => n.birthdayDate)
                      .HasConversion<DateOnlyConverter, DateOnlyComparer>();
-              builder.Property(n => n.Gender)
+              builder.Property(n => n.gender)
                      .HasColumnType("varchar(100)")
                      .IsRequired(false);
-              builder.Property(n => n.SkinColor)
+              builder.Property(n => n.skinColor)
                      .HasColumnType("varchar(100)")
                      .IsRequired(false);
-              builder.Property(n => n.IsPcd)
+              builder.Property(n => n.isPcd)
                      .HasColumnType("varchar(100)")
                      .IsRequired(false);
        }

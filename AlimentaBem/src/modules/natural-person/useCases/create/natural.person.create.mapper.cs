@@ -1,6 +1,8 @@
 using alimenta_bem.src.natural.person.repository;
 using alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
 using alimenta_bem.src.modules.natural.person.useCases.create.dto.response;
+using alimenta_bem.helpers;
+using alimenta_bem.src.natural.person.@enum;
 
 namespace alimenta.bem.src.modules.natural.person.useCases.create.mapper;
 
@@ -9,34 +11,34 @@ public class UserCreateMapper : Mapper<NaturalPersonCreateRequest, NaturalPerson
 
     public override NaturalPerson ToEntity(NaturalPersonCreateRequest req) => new()
     {
-        UserId = req.UserId,
-        FirstName = req.FirstName,
-        LastName = req.LastName,
-        SocialName = req.SocialName,
-        Cpf = req.Cpf,
-        Rg = req.Rg,
-        Age = req.Age,
-        BirthdayDate = req.BirthdayDate,
-        Gender = req.Gender,
-        SkinColor = req.SkinColor,
-        IsPcd = req.IsPcd
+        userId = req.userId,
+        firstName = req.firstName,
+        lastName = req.lastName,
+        socialName = req.socialName,
+        cpf = req.cpf,
+        rg = req.rg,
+        age = req.age,
+        birthdayDate = req.birthdayDate,
+        gender = EnumHelper.ToEnumOrNull<Gender>(req.gender),
+        skinColor = EnumHelper.ToEnumOrNull<SkinColor>(req.skinColor),
+        isPcd = req.isPcd
     };
 
     public override NaturalPersonCreateResponse FromEntity(NaturalPerson n) => new()
     {
-        Id = n.Id,
-        UserId = n.UserId,
-        FirstName = n.FirstName,
-        LastName = n.LastName,
-        SocialName = n.SocialName,
-        Cpf = n.Cpf,
-        Rg = n.Rg,
-        Age = n.Age,
-        BirthdayDate = n.BirthdayDate,
-        Gender = n.Gender,
-        SkinColor = n.SkinColor,
-        IsPcd = n.IsPcd,
-        CreatedAt = n.CreatedAt,
-        UpdatedAt = n.UpdatedAt
+        id = n.id,
+        userId = n.userId,
+        firstName = n.firstName,
+        lastName = n.lastName,
+        socialName = n.socialName,
+        cpf = n.cpf,
+        rg = n.rg,
+        age = n.age,
+        birthdayDate = n.birthdayDate,
+        gender = n.gender.ToString(),
+        skinColor = n.skinColor.ToString(),
+        isPcd = n.isPcd,
+        createdAt = n.createdAt,
+        updatedAt = n.updatedAt
     };
 }

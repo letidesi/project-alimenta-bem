@@ -6,9 +6,9 @@ namespace alimenta_bem.src.modules.user.repository;
 
 public class User : BaseEntity
 {
-    public virtual ICollection<Role>? Roles { get; set; }
-    public virtual ICollection<NaturalPerson>? NaturalPersons { get; set; }
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string PasswordHash { get; set; }
+    public virtual ICollection<Role>? roles { get; set; }
+    public virtual ICollection<NaturalPerson>? naturalPersons { get; set; }
+    public string name { get; set; }
+    public string email { get; set; }
+    public string passwordHash { get; set; }
 }

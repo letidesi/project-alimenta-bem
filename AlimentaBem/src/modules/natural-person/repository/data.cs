@@ -24,15 +24,15 @@ public class NaturalPersonData : INaturalPersonData
     }
     public async Task<bool> Check_Natural_Person_Already_Exists_With_Same_User(NaturalPerson naturalPerson)
     {
-        return await _context.NaturalPersons.AnyAsync(n => n.UserId == naturalPerson.UserId);
+        return await _context.NaturalPersons.AnyAsync(n => n.userId == naturalPerson.userId);
     }
     public async Task<bool> Check_Rg_Already_Exists(Guid Id, string Rg)
     {
-        return await _context.NaturalPersons.Where(np => np.Id != Id && np.Rg.Equals(Rg)).AnyAsync();
+        return await _context.NaturalPersons.Where(np => np.id != Id && np.rg.Equals(Rg)).AnyAsync();
     }
     public async Task<bool> Check_Cpf_Already_Exists(Guid Id, string Cpf)
     {
-        return await _context.NaturalPersons.Where(np => np.Id != Id && np.Cpf.Equals(Cpf)).AnyAsync();
+        return await _context.NaturalPersons.Where(np => np.id != Id && np.cpf.Equals(Cpf)).AnyAsync();
     }
 
 }

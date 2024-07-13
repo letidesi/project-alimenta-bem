@@ -18,10 +18,10 @@ public class UserCreateUseCase
 
     public async Task<User> exec(User user)
     {
-        var email_validation = is_Valid_Email_Function.Is_Valid_Email(user.Email);
+        var email_validation = is_Valid_Email_Function.Is_Valid_Email(user.email);
         if (email_validation is false) throw new Exception(_localizer["data:EmailInvalid"]);
 
-        var existing_user = await _user_data.ReadOneByEmail(user.Email);
+        var existing_user = await _user_data.ReadOneByEmail(user.email);
         if (existing_user is not null)
             throw new Exception(_localizer["user:UserSameEmail"]);
 

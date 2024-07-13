@@ -9,21 +9,21 @@ public class Validator : Validator<NaturalPersonCreateRequest>
     {
         var _localizer = localizer;
 
-        RuleFor(request => request.FirstName)
+        RuleFor(request => request.firstName)
          .NotEmpty()
          .WithMessage(_localizer["natural.person:FirstNameRequired"]);
 
-        RuleFor(request => request.LastName)
+        RuleFor(request => request.lastName)
          .NotEmpty()
          .WithMessage(_localizer["natural.person:LastNameRequired"]);
 
-        RuleFor(request => request.Cpf)
+        RuleFor(request => request.cpf)
          .NotEmpty()
          .WithMessage(_localizer["natural.person:CPFRequired"])
          .MaximumLength(11)
          .WithMessage(_localizer["natural.person:CPFSizeRequired"]);
 
-        RuleFor(request => request.Rg)
+        RuleFor(request => request.rg)
          .NotEmpty()
          .WithMessage(_localizer["natural.person:RGRequired"])
          .MinimumLength(5)
@@ -31,15 +31,15 @@ public class Validator : Validator<NaturalPersonCreateRequest>
          .MaximumLength(12)
          .WithMessage(_localizer["natural.person:RGSizeMax"]);
 
-        RuleFor(request => request.Age)
+        RuleFor(request => request.age)
          .NotEmpty()
          .WithMessage(_localizer["natural.person:AgeRequired"]);
 
-        RuleFor(request => request.Age)
+        RuleFor(request => request.age)
          .NotEmpty()
          .WithMessage(_localizer["natural.person:AgeRequired"]);
 
-        RuleFor(request => request.BirthdayDate)
+        RuleFor(request => request.birthdayDate)
             .NotEmpty()
             .WithMessage(_localizer["natural.person:BirthdayDateRequired"]);
     }

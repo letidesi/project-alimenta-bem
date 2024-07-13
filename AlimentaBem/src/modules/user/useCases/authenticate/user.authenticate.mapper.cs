@@ -15,7 +15,7 @@ public class UserAuthenticateMapper : ResponseMapper<UserAuthenticateResponse, U
 
     public override UserAuthenticateResponse FromEntity(User u) => new()
     {
-        Accesstoken = _criptoProvider.generateAccessToken(u),
-        Refreshtoken = _criptoProvider.generateRefreshToken(u)
+        accesstoken = _criptoProvider.generateAccessToken(u),
+        refreshtoken = _criptoProvider.generateRefreshToken(u)
     };
 }

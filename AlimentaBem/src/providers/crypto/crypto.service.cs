@@ -20,13 +20,13 @@ public class CryptoService : ICryptoProvider
 
         var identityClaims = new ClaimsIdentity();
 
-        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()));
-        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Name, user.Name ?? ""));
-        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Email, user.Email));
+        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, user.id.ToString()));
+        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Name, user.name ?? ""));
+        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Email, user.email));
         identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
 
         // set 
-        var roleClaims = RolesIntoClaim(user.Roles);
+        var roleClaims = RolesIntoClaim(user.roles);
 
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWT_SECRET));
 
@@ -54,7 +54,7 @@ public class CryptoService : ICryptoProvider
 
         var identityClaims = new ClaimsIdentity();
 
-        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()));
+        identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, user.id.ToString()));
 
         identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
 
@@ -108,7 +108,7 @@ public class CryptoService : ICryptoProvider
 
     private IDictionary<string, object> RolesIntoClaim(ICollection<Role> roles)
     {
-        var rolesArray = roles.Select(roles => roles.Type);
+        var rolesArray = roles.Select(roles => roles.type);
 
         return new Dictionary<string, object>(){
             { "roles", rolesArray },

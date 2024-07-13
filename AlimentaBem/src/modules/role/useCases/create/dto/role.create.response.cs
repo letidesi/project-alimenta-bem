@@ -4,6 +4,6 @@ namespace alimenta_bem.src.modules.role.useCases.create.dto.response;
 
 public class RoleCreateResponse : BaseEntity
 {
-    public Guid UserId { get; set; }
-    public string Type { get; set; }
+    public Guid userId { get; set; }
+    public string type { get; set; }
 }

@@ -7,17 +7,17 @@ public class UserMap : IEntityTypeConfiguration<User>
 {
        public void Configure(EntityTypeBuilder<User> builder)
        {
-              builder.HasMany(u => u.Roles)
-                     .WithOne(r => r.User)
-                     .HasForeignKey(r => r.UserId);
-              builder.HasKey(u => u.Id);
-              builder.Property(u => u.Name)
+              builder.HasMany(u => u.roles)
+                     .WithOne(r => r.user)
+                     .HasForeignKey(r => r.userId);
+              builder.HasKey(u => u.id);
+              builder.Property(u => u.name)
                      .HasColumnType("varchar(100)");
-              builder.Property(u => u.Email)
+              builder.Property(u => u.email)
                     .HasColumnType("varchar(100)");
-              builder.Property(u => u.Name)
+              builder.Property(u => u.name)
                      .HasColumnType("varchar(100)");
-              builder.Property(u => u.PasswordHash)
+              builder.Property(u => u.passwordHash)
                      .HasColumnType("varchar(max)");
        }
 }

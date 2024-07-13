@@ -1,6 +1,6 @@
 public abstract class WithTimeStamp : IAuditable, ISoftDelete
 {
-    public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
-    public DateTimeOffset? UpdatedAt { get; set; }
-    public DateTimeOffset? DeletedAt { get; set; }
+    public DateTimeOffset createdAt { get; set; } = DateTimeOffset.UtcNow;
+    public DateTimeOffset? updatedAt { get; set; }
+    public DateTimeOffset? deletedAt { get; set; }
 }

@@ -10,11 +10,11 @@ public class Validator : Validator<RoleCreateRequest>
     {
         var _localizer = localizer;
 
-        RuleFor(request => request.UserId)
+        RuleFor(request => request.userId)
            .NotEmpty()
            .WithMessage(_localizer["user:UserIdRequired"]);
 
-        RuleFor(request => request.Type)
+        RuleFor(request => request.type)
              .IsEnumName(typeof(EnumRole))
              .WithMessage(_localizer["data:InvalidTypeParameter"]);
     }

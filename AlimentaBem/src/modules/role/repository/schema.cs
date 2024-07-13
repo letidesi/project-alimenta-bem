@@ -5,7 +5,7 @@ namespace alimenta_bem.src.modules.role.repository;
 
 public class Role : BaseEntity
 {
-    public Guid UserId { get; set; }
-    public User User { get; set; }
-    public string Type { get; set; }
+    public Guid userId { get; set; }
+    public User user { get; set; }
+    public string type { get; set; }
 }

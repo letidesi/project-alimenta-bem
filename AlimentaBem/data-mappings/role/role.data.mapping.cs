@@ -7,8 +7,8 @@ public class RoleMap : IEntityTypeConfiguration<Role>
 {
        public void Configure(EntityTypeBuilder<Role> builder)
        {
-              builder.HasKey(u => u.Id);
-              builder.Property(u => u.Type)
+              builder.HasKey(u => u.id);
+              builder.Property(u => u.type)
                      .HasColumnType("varchar(100)");
        }
 }

@@ -17,22 +17,22 @@ public class ValidateNaturalPersonData
     }
     public void Validate_Natural_Person_Fields(NaturalPerson naturalPerson)
     {
-        naturalPerson.FirstName = naturalPerson.FirstName.Trim();
-        naturalPerson.LastName = naturalPerson.LastName.Trim();
+        naturalPerson.firstName = naturalPerson.firstName.Trim();
+        naturalPerson.lastName = naturalPerson.lastName.Trim();
 
-        var validCPF = Is_Valid_Cpf(naturalPerson.Cpf);
+        var validCPF = Is_Valid_Cpf(naturalPerson.cpf);
         if (!validCPF) throw new Exception(_localizer["naturalPerson:CPFInvalid"]);
 
-        Validate_Date_Of_Birth(naturalPerson.BirthdayDate);
+        Validate_Date_Of_Birth(naturalPerson.birthdayDate);
 
-        naturalPerson.Cpf = StringUtility.RemoveSpecialCharacter(naturalPerson.Cpf).Trim();
-        if (naturalPerson.Cpf is null)
+        naturalPerson.cpf = StringUtility.RemoveSpecialCharacter(naturalPerson.cpf).Trim();
+        if (naturalPerson.cpf is null)
             throw new Exception(_localizer["naturalPerson:CPFRequired"]);
-        if (naturalPerson.Cpf.Length != 11)
+        if (naturalPerson.cpf.Length != 11)
             throw new Exception(_localizer["naturalPerson:CPFSizeRequired"]);
 
-        if (naturalPerson.SocialName is not null)
-            naturalPerson.SocialName = naturalPerson.SocialName.Trim();
+        if (naturalPerson.socialName is not null)
+            naturalPerson.socialName = naturalPerson.socialName.Trim();
     }
     public async Task Exist_Data_Of_Natural_Person(NaturalPerson naturalPerson)
     {
@@ -40,13 +40,13 @@ public class ValidateNaturalPersonData
         if (existingNaturalPerson)
             throw new Exception(_localizer["naturalPerson:NaturalPersonSameUserId"]);
 
-        if (naturalPerson.Rg is not null)
+        if (naturalPerson.rg is not null)
         {
-            var existRG = await _natural_person_data.Check_Rg_Already_Exists(naturalPerson.Id, naturalPerson.Rg);
+            var existRG = await _natural_person_data.Check_Rg_Already_Exists(naturalPerson.id, naturalPerson.rg);
             if (existRG) throw new Exception(_localizer["naturalPerson:RGAlreadyUse"]);
         }
 
-        var existCPF = await _natural_person_data.Check_Cpf_Already_Exists(naturalPerson.Id, naturalPerson.Cpf);
+        var existCPF = await _natural_person_data.Check_Cpf_Already_Exists(naturalPerson.id, naturalPerson.cpf);
         if (existCPF) throw new Exception(_localizer["naturalPerson:CPFAlreadyUse"]);
     }
 

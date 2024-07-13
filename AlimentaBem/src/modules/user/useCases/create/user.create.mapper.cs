@@ -10,17 +10,17 @@ public class UserCreateMapper : Mapper<UserCreateRequest, UserCreateResponse, Us
 
     public override User ToEntity(UserCreateRequest req) => new()
     {
-        Name = req.Name.Trim(),
-        Email = req.Email.ToLower().Trim(),
-        PasswordHash = FormatPassword.GenerateHash(req.Password),
+        name = req.name.Trim(),
+        email = req.email.ToLower().Trim(),
+        passwordHash = FormatPassword.GenerateHash(req.password),
     };
 
     public override UserCreateResponse FromEntity(User u) => new()
     {
-        Id = u.Id,
-        Name = u.Name,
-        Email = u.Email,
-        CreatedAt = u.CreatedAt,
-        UpdatedAt = u.UpdatedAt
+        id = u.id,
+        name = u.name,
+        email = u.email,
+        createdAt = u.createdAt,
+        updatedAt = u.updatedAt
     };
 }

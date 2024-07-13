@@ -9,17 +9,17 @@ public class Validator : Validator<UserCreateRequest>
     {
         var _localizer = localizer;
 
-        RuleFor(request => request.Name)
+        RuleFor(request => request.name)
            .NotEmpty()
            .WithMessage(_localizer["data:NameRequired"]);
 
-        RuleFor(request => request.Email)
+        RuleFor(request => request.email)
             .NotEmpty()
             .WithMessage(_localizer["data:EmailRequired"])
             .EmailAddress()
             .WithMessage(_localizer["data:FormatOfEmailAddress"]);
 
-        RuleFor(request => request.Password)
+        RuleFor(request => request.password)
             .NotEmpty()
             .WithMessage(_localizer["user:PasswordRequired"])
             .MinimumLength(6)

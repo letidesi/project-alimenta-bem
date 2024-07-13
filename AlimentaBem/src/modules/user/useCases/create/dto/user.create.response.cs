@@ -4,7 +4,7 @@ namespace alimenta_bem.src.modules.user.useCases.create.dto.response;
 
 public class UserCreateResponse : BaseEntity
 {
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string PasswordHash { get; set; }
+    public string name { get; set; }
+    public string email { get; set; }
+    public string passwordHash { get; set; }
 }

@@ -5,15 +5,16 @@ namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
 public class NaturalPersonCreateRequest
 {
     [FromClaim(ClaimTypes.NameIdentifier, IsRequired = true)]
-    public Guid UserId { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string? SocialName { get; set; }
-    public string Cpf { get; set; }
-    public string Rg { get; set; }
-    public string Age { get; set; }
-    public DateOnly BirthdayDate { get; set; }
-    public string? Gender { get; set; }
-    public string? SkinColor { get; set; }
-    public bool? IsPcd { get; set; }
+    public Guid userId { get; set; }
+
+    public string firstName { get; set; }
+    public string lastName { get; set; }
+    public string? socialName { get; set; }
+    public string cpf { get; set; }
+    public string rg { get; set; }
+    public string age { get; set; }
+    public DateOnly birthdayDate { get; set; }
+    public string? gender { get; set; }
+    public string? skinColor { get; set; }
+    public bool? isPcd { get; set; }
 }

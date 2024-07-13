@@ -35,7 +35,7 @@ public class AlimentaBemContext : DbContext
 
                 var body = Expression.Equal(
 
-                    Expression.Property(parameter, nameof(BaseEntity.DeletedAt)),
+                    Expression.Property(parameter, nameof(BaseEntity.deletedAt)),
 
                     Expression.Constant(null, typeof(DateTime?))
                 );

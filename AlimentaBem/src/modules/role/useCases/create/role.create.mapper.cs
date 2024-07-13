@@ -9,16 +9,16 @@ public class RoleCreateMapper : Mapper<RoleCreateRequest, RoleCreateResponse, Ro
 
     public override Role ToEntity(RoleCreateRequest req) => new()
     {
-        UserId = req.UserId,
-        Type = req.Type
+        userId = req.userId,
+        type = req.type
     };
 
     public override RoleCreateResponse FromEntity(Role r) => new()
     {
-        Id = r.Id,
-        UserId = r.UserId,
-        Type = r.Type,
-        CreatedAt = r.CreatedAt,
-        UpdatedAt = r.UpdatedAt
+        id = r.id,
+        userId = r.userId,
+        type = r.type,
+        createdAt = r.createdAt,
+        updatedAt = r.updatedAt
     };
 }

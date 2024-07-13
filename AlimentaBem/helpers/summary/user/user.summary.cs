@@ -4,6 +4,6 @@ namespace alimenta_bem.helpers;
 
 public class UserSummary : BaseEntity
 {
-    public string Name { get; set; }
-    public string Email { get; set; }
+    public string name { get; set; }
+    public string email { get; set; }
 }
