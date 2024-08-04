@@ -1,5 +1,7 @@
 using alimenta_bem.db.context;
 using alimenta_bem.helpers;
+using alimenta_bem.src.modules.role.@enum;
+using alimenta_bem.src.modules.role.repository;
 using alimenta_bem.src.modules.user.repository;
 
 namespace alimenta_bem.src.modules.user.useCases.create.useCase;
@@ -24,6 +26,14 @@ public class UserCreateUseCase
         var existing_user = await _user_data.ReadOneByEmail(user.email);
         if (existing_user is not null)
             throw new Exception(_localizer["user:UserSameEmail"]);
+
+        user.roles = new List<Role>()
+        {
+           new Role()
+           {
+                type = Enum.GetName(EnumRole.Citizen)
+           }
+        };
 
         var create_user = await _user_data.Create(user);
         return create_user;

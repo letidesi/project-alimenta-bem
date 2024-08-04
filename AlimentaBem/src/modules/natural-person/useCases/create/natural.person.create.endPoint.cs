@@ -15,13 +15,13 @@ public class UserCreateEndPoint : Endpoint<NaturalPersonCreateRequest, NaturalPe
     public override void Configure()
     {
         Post("natural-person");
-        Roles("Developer");
         Options(n => n.WithTags("natural-person"));
         Summary(s =>
         {
             s.Summary = "Create a new natural person";
             s.Description = "Register a natural person on the platform";
         });
+        AllowAnonymous(); 
     }
 
     public override async Task HandleAsync(NaturalPersonCreateRequest req, CancellationToken ct)

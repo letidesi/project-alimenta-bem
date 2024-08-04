@@ -34,8 +34,8 @@ public class CryptoService : ICryptoProvider
 
         var securityToken = handler.CreateToken(new SecurityTokenDescriptor
         {
-            Issuer = "alimentabem",
-            Audience = "AlimentaBem",
+            Issuer = "Alimentabem",
+            Audience = "ABem",
             SigningCredentials = signingCredentials,
             Subject = identityClaims,
             Claims = roleClaims,
@@ -62,8 +62,8 @@ public class CryptoService : ICryptoProvider
 
         var securityToken = handler.CreateToken(new SecurityTokenDescriptor
         {
-            Issuer = "alimentabem",
-            Audience = "AlimentaBem",
+            Issuer = "Alimentabem",
+            Audience = "ABem",
             SigningCredentials = signingCredentials,
             Subject = identityClaims,
             NotBefore = DateTime.UtcNow.Date,
@@ -83,9 +83,13 @@ public class CryptoService : ICryptoProvider
 
         var payload = await handler.ValidateTokenAsync(token, new TokenValidationParameters()
         {
-            ValidIssuer = "alimentabem",
-            ValidAudience = "AlimentaBem",
+            ValidIssuer = "Alimentabem",
+            ValidAudience = "ABem",
+            ValidateIssuer = true,
+            ValidateAudience = true,
             RequireSignedTokens = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
             IssuerSigningKey = signingCredentials.Key
         });
 
@@ -108,7 +112,7 @@ public class CryptoService : ICryptoProvider
 
     private IDictionary<string, object> RolesIntoClaim(ICollection<Role> roles)
     {
-        var rolesArray = roles.Select(roles => roles.type);
+        var rolesArray = roles.Select(roles => roles.type).ToList();
 
         return new Dictionary<string, object>(){
             { "roles", rolesArray },

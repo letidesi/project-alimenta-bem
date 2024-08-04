@@ -26,13 +26,13 @@ public class NaturalPersonData : INaturalPersonData
     {
         return await _context.NaturalPersons.AnyAsync(n => n.userId == naturalPerson.userId);
     }
-    public async Task<bool> Check_Rg_Already_Exists(Guid Id, string Rg)
+    public async Task<bool> Check_Rg_Already_Exists(Guid id, string rg)
     {
-        return await _context.NaturalPersons.Where(np => np.id != Id && np.rg.Equals(Rg)).AnyAsync();
+        return await _context.NaturalPersons.Where(np => np.id != id && np.rg.Equals(rg)).AnyAsync();
     }
-    public async Task<bool> Check_Cpf_Already_Exists(Guid Id, string Cpf)
+    public async Task<bool> Check_Cpf_Already_Exists(Guid id, string cpf)
     {
-        return await _context.NaturalPersons.Where(np => np.id != Id && np.cpf.Equals(Cpf)).AnyAsync();
+        return await _context.NaturalPersons.Where(np => np.id != id && np.cpf.Equals(cpf)).AnyAsync();
     }
 
 }
