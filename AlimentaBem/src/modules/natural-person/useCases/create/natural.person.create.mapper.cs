@@ -6,7 +6,7 @@ using alimenta_bem.src.natural.person.@enum;
 
 namespace alimenta.bem.src.modules.natural.person.useCases.create.mapper;
 
-public class UserCreateMapper : Mapper<NaturalPersonCreateRequest, NaturalPersonCreateResponse, NaturalPerson>
+public class NaturalPersonCreateMapper : Mapper<NaturalPersonCreateRequest, NaturalPersonCreateResponse, NaturalPerson>
 {
 
     public override NaturalPerson ToEntity(NaturalPersonCreateRequest req) => new()
