@@ -4,6 +4,7 @@ using alimenta_bem.src.modules.role.repository;
 using alimenta_bem.src.modules.user.repository;
 using alimenta_bem.src.natural.person.repository;
 using alimenta_bem.src.organization.repository;
+using alimenta_bem.src.organization.requirement.repository;
 
 namespace alimenta_bem.db.context;
 
@@ -17,6 +18,7 @@ public class AlimentaBemContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<NaturalPerson> NaturalPersons { get; set; }
     public DbSet<Organization> Organizations { get; set; }
+    public DbSet<OrganizationRequirement> OrganizationRequirements { get; set; }
 
     #endregion
     protected override void OnModelCreating(ModelBuilder mb)
