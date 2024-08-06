@@ -17,13 +17,14 @@ public class OrganizationRequirementCreateMapper : Mapper<OrganizationRequiremen
         type = EnumHelper.ToEnum<Priority>(req.type),
     };
 
-    public override OrganizationRequirementCreateResponse FromEntity(OrganizationRequirement o) => new()
+    public override OrganizationRequirementCreateResponse FromEntity(OrganizationRequirement or) => new()
     {
-        id = o.id,
-        itemName = o.itemName,
-        quantity = o.quantity,
-        type = o.type.ToString(),
-        createdAt = o.createdAt,
-        updatedAt = o.updatedAt
+        id = or.id,
+        organizationId = or.organizationId,
+        itemName = or.itemName,
+        quantity = or.quantity,
+        type = or.type.ToString(),
+        createdAt = or.createdAt,
+        updatedAt = or.updatedAt
     };
 }

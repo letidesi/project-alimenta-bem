@@ -23,6 +23,6 @@ public class Validator : Validator<OrganizationRequirementCreateRequest>
 
         RuleFor(request => request.type)
         .NotEmpty()
-        .WithMessage(_localizer["date:TypeRequired"]);
+        .WithMessage(_localizer["data:TypeRequired"]);
     }
 }
