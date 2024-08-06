@@ -9,8 +9,8 @@
     {
         "Key": "NameRequired",
         "LocalizedValues": {
-            "en-US": "The parameter name is required.",
-            "pt-BR": "O parâmetro nome é obrigatório."
+            "en-US": "The parameter \"name\" is required.",
+            "pt-BR": "O parâmetro \"name\" é obrigatório."
         }
     },
     {
@@ -27,12 +27,18 @@
             "pt-BR": "Formato de email inválido."
         }
     },
-
     {
         "Key": "InvalidTypeParameter",
         "LocalizedValues": {
             "en-US": "Parameter \"Type\" is invalid.",
             "pt-BR": "O parâmetro \"Type\" é inválido."
+        }
+    },
+    {
+        "Key": "TypeRequired",
+        "LocalizedValues": {
+            "en-US": "Parameter \"Type\" is required.",
+            "pt-BR": "O parâmetro \"Type\" é obrigatório."
         }
     }
 ]

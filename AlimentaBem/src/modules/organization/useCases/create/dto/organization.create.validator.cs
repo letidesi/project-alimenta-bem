@@ -11,6 +11,10 @@ public class Validator : Validator<OrganizationCreateRequest>
 
         RuleFor(request => request.name)
          .NotEmpty()
-         .WithMessage(_localizer["organization:FirstNameRequired"]);
+         .WithMessage(_localizer["data:NameRequired"]);
+        
+        RuleFor(request => request.type)
+         .NotEmpty()
+         .WithMessage(_localizer["data:TypeRequired"]);
     }
 }
