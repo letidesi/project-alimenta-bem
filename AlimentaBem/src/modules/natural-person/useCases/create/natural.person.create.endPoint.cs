@@ -7,7 +7,7 @@ using alimenta_bem.src.modules.natural.person.useCases.create.useCase;
 
 namespace alimenta_bem.src.modules.natural.person.useCases.create.endpoint;
 
-public class UserCreateEndPoint : Endpoint<NaturalPersonCreateRequest, NaturalPersonCreateResponse, NaturalPersonCreateMapper>
+public class NaturalPersonCreateEndPoint : Endpoint<NaturalPersonCreateRequest, NaturalPersonCreateResponse, NaturalPersonCreateMapper>
 {
     public AlimentaBemContext _context { get; init; }
     public Localizer _localizer { get; init; }
