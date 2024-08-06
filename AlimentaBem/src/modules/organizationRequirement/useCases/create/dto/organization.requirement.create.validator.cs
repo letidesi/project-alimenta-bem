@@ -10,15 +10,19 @@ public class Validator : Validator<OrganizationRequirementCreateRequest>
         var _localizer = localizer;
 
         RuleFor(request => request.organizationId)
-         .NotEmpty()
-         .WithMessage(_localizer["natural.person:FirstNameRequied"]);
+        .NotEmpty()
+        .WithMessage(_localizer["organization:OrganizationIdRequired"]);
 
-        RuleFor(request => request.name)
-         .NotEmpty()
-         .WithMessage(_localizer["data:NameRequired"]);
+        RuleFor(request => request.itemName)
+        .NotEmpty()
+        .WithMessage(_localizer["organizationRequirement:ItemNameRequired"]);
+
+        RuleFor(request => request.quantity)
+        .NotEmpty()
+        .WithMessage(_localizer["organizationRequirement:QuantityRequired"]);
 
         RuleFor(request => request.type)
-         .NotEmpty()
-         .WithMessage(_localizer["date.person:CPFRequired"]);
+        .NotEmpty()
+        .WithMessage(_localizer["date:TypeRequired"]);
     }
 }

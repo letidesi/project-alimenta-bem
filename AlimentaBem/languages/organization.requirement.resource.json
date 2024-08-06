@@ -1,0 +1,16 @@
+[
+    {
+        "Key": "QuantityRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"quantity\" is required.",
+            "pt-BR": "O parâmetro \"quantity\" é obrigatório."
+        }
+    },
+    {
+        "Key": "ItemNameRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"ItemName\" is required.",
+            "pt-BR": "O parâmetro \"ItemName\" é obrigatório."
+        }
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "Key": "OrganizationIdRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"organizationId\" is required.",
+            "pt-BR": "O parâmetro \"organizationId\" é obrigatório."
+        }
+    }
+]

@@ -12,7 +12,7 @@ public class OrganizationRequirementCreateMapper : Mapper<OrganizationRequiremen
     public override OrganizationRequirement ToEntity(OrganizationRequirementCreateRequest req) => new()
     {
         organizationId = req.organizationId,
-        name = req.name,
+        itemName = req.itemName,
         quantity = req.quantity,
         type = EnumHelper.ToEnum<Priority>(req.type),
     };
@@ -20,7 +20,7 @@ public class OrganizationRequirementCreateMapper : Mapper<OrganizationRequiremen
     public override OrganizationRequirementCreateResponse FromEntity(OrganizationRequirement o) => new()
     {
         id = o.id,
-        name = o.name,
+        itemName = o.itemName,
         quantity = o.quantity,
         type = o.type.ToString(),
         createdAt = o.createdAt,
