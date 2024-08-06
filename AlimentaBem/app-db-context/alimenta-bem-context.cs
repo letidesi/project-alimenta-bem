@@ -16,7 +16,6 @@ public class AlimentaBemContext : DbContext
     public DbSet<Role> Roles { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<NaturalPerson> NaturalPersons { get; set; }
-
     public DbSet<Organization> Organizations { get; set; }
 
     #endregion
