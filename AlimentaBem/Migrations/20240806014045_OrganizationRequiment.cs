@@ -17,7 +17,7 @@ namespace alimenta_bem.Migrations
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     organizationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    itemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
                     type = table.Column<int>(type: "int", nullable: false),
                     createdAt = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
