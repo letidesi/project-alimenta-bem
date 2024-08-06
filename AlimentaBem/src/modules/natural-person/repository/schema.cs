@@ -15,9 +15,6 @@ public class NaturalPerson : BaseEntity
     public string rg { get; set; }
     public string age { get; set; }
     public DateOnly birthdayDate { get; set; }
-    // public string Neighborhood { get; set; } = Parque Xerém
-    // public string City { get; set; } = "Duque de Caxias";
-    // public string State { get; set; } = "Rio de Janeiro";
     public Gender? gender { get; set; }
     public SkinColor? skinColor { get; set; }
     public bool? isPcd { get; set; }
