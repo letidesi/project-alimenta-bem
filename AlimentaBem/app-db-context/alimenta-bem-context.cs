@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using alimenta.bem.entity.metadata;
+using alimenta_bem.src.donation.repository;
 using alimenta_bem.src.modules.role.repository;
 using alimenta_bem.src.modules.user.repository;
 using alimenta_bem.src.natural.person.repository;
@@ -19,6 +20,7 @@ public class AlimentaBemContext : DbContext
     public DbSet<NaturalPerson> NaturalPersons { get; set; }
     public DbSet<Organization> Organizations { get; set; }
     public DbSet<OrganizationRequirement> OrganizationRequirements { get; set; }
+    public DbSet<Donation> Donations { get; set; }
 
     #endregion
     protected override void OnModelCreating(ModelBuilder mb)
