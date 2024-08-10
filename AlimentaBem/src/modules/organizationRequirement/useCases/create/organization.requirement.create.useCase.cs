@@ -20,7 +20,7 @@ public class OrganizationRequirementCreateUseCase
         var create_organization_requirement = await _organization_requirement_data.Create(organizationRequirement);
 
         if (create_organization_requirement is null)
-            throw new Exception(_localizer["organization.requirement:IndividualCreationFailed"]);
+            throw new Exception(_localizer["organizationRequirement:IndividualCreationFailed"]);
 
         return create_organization_requirement;
     }
