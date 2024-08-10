@@ -15,7 +15,6 @@ public class NaturalPersonCreateEndPoint : Endpoint<NaturalPersonCreateRequest, 
     public override void Configure()
     {
         Post("natural-person");
-        // Roles("Developer", "Citizen");
         Options(n => n.WithTags("natural-person"));
         Summary(s =>
         {
