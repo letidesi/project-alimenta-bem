@@ -1,0 +1,23 @@
+[
+    {
+        "Key": "ItemNameRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"itemName\" is required.",
+            "pt-BR": "O parâmetro \"itemName\" é obrigatório."
+        }
+    },
+    {
+        "Key": "AmountDonatedRequired",
+        "LocalizedValues": {
+            "en-US": "The parameter \"amountDonated\" is required.",
+            "pt-BR": "O parâmetro \"amountDonated\" é obrigatório."
+        }
+    },
+    {
+        "Key": "IndividualCreationFailed",
+        "LocalizedValues": {
+            "en-US": "Unable to create the donation.",
+            "pt-BR": "Não foi possível criar a doação."
+        }
+    }
+]
