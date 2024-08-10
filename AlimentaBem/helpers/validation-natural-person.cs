@@ -20,16 +20,7 @@ public class ValidateNaturalPersonData
         naturalPerson.firstName = naturalPerson.firstName.Trim();
         naturalPerson.lastName = naturalPerson.lastName.Trim();
 
-        var validCPF = Is_Valid_Cpf(naturalPerson.cpf);
-        if (!validCPF) throw new Exception(_localizer["naturalPerson:CPFInvalid"]);
-
         Validate_Date_Of_Birth(naturalPerson.birthdayDate);
-
-        naturalPerson.cpf = StringUtility.RemoveSpecialCharacter(naturalPerson.cpf).Trim();
-        if (naturalPerson.cpf is null)
-            throw new Exception(_localizer["naturalPerson:CPFRequired"]);
-        if (naturalPerson.cpf.Length != 11)
-            throw new Exception(_localizer["naturalPerson:CPFSizeRequired"]);
 
         if (naturalPerson.socialName is not null)
             naturalPerson.socialName = naturalPerson.socialName.Trim();
@@ -39,15 +30,6 @@ public class ValidateNaturalPersonData
         var existingNaturalPerson = await _natural_person_data.Check_Natural_Person_Already_Exists_With_Same_User(naturalPerson);
         if (existingNaturalPerson)
             throw new Exception(_localizer["naturalPerson:NaturalPersonSameUserId"]);
-
-        if (naturalPerson.rg is not null)
-        {
-            var existRG = await _natural_person_data.Check_Rg_Already_Exists(naturalPerson.id, naturalPerson.rg);
-            if (existRG) throw new Exception(_localizer["naturalPerson:RGAlreadyUse"]);
-        }
-
-        var existCPF = await _natural_person_data.Check_Cpf_Already_Exists(naturalPerson.id, naturalPerson.cpf);
-        if (existCPF) throw new Exception(_localizer["naturalPerson:CPFAlreadyUse"]);
     }
 
     public bool Is_Valid_Cpf(string cpf)

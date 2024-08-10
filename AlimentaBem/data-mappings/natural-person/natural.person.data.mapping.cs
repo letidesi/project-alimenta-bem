@@ -18,10 +18,6 @@ public class NaturalPersonMap : IEntityTypeConfiguration<NaturalPerson>
               builder.Property(n => n.socialName)
                      .HasColumnType("varchar(100)")
                      .IsRequired(false);
-              builder.Property(n => n.cpf)
-                     .HasColumnType("varchar(100)");
-              builder.Property(n => n.rg)
-                     .HasColumnType("varchar(100)");
               builder.Property(n => n.age)
                      .HasColumnType("varchar(50)");
               builder.Property(n => n.birthdayDate)

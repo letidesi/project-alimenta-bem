@@ -13,8 +13,6 @@ public class NaturalPerson : BaseEntity
     public string firstName { get; set; }
     public string lastName { get; set; }
     public string? socialName { get; set; }
-    public string cpf { get; set; }
-    public string rg { get; set; }
     public string age { get; set; }
     public DateOnly birthdayDate { get; set; }
     public Gender? gender { get; set; }
