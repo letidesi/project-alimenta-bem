@@ -11,7 +11,7 @@ public class Validator : Validator<DonationCreateRequest>
 
         RuleFor(request => request.naturalPersonId)
          .NotEmpty()
-         .WithMessage(_localizer["natural.person:NaturalPersonIdRequired"]);
+         .WithMessage(_localizer["naturalPerson:NaturalPersonIdRequired"]);
 
         RuleFor(request => request.organizationId)
          .NotEmpty()

@@ -4,4 +4,5 @@ public interface IUserData
 {
     Task<User> Create(User user);
     Task<User?> ReadOneByEmail(string email);
+    Task<User?> ReadOne(Guid id);
 }

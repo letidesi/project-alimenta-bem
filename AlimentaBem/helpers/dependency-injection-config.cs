@@ -7,5 +7,7 @@ public static class DependencyInjectionConfig
     {
         services.AddSingleton<Localizer>();
         services.AddSingleton<ICryptoProvider, CryptoService>();
+        services.AddSingleton<CryptoService>();
+
     }
 }

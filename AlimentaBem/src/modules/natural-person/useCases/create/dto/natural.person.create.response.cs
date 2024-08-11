@@ -8,8 +8,6 @@ public class NaturalPersonCreateResponse : BaseEntity
     public string firstName { get; set; }
     public string lastName { get; set; }
     public string? socialName { get; set; }
-    public string cpf { get; set; }
-    public string rg { get; set; }
     public string age { get; set; }
     public DateOnly birthdayDate { get; set; }
     public string? gender { get; set; }

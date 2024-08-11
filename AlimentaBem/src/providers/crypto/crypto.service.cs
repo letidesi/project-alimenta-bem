@@ -14,6 +14,20 @@ public class CryptoService : ICryptoProvider
     private readonly string JWT_SECRET = Environment.GetEnvironmentVariable("JWT_SECRET");
     private readonly string privateKEY = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "private.key");
 
+    private SigningCredentials getSecurityKey()
+    {
+        var rsa = new RSACryptoServiceProvider();
+
+        rsa.ImportFromPem(privateKEY);
+
+        var signingCredentials = new SigningCredentials(new RsaSecurityKey(rsa), SecurityAlgorithms.RsaSha256)
+        {
+            CryptoProviderFactory = new CryptoProviderFactory { CacheSignatureProviders = false }
+        };
+
+        return signingCredentials;
+    }
+
     public string generateAccessToken(User user)
     {
         var handler = new JwtSecurityTokenHandler();
@@ -28,9 +42,8 @@ public class CryptoService : ICryptoProvider
         // set 
         var roleClaims = RolesIntoClaim(user.roles);
 
-        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWT_SECRET));
 
-        var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
+        var signingCredentials = getSecurityKey();
 
         var securityToken = handler.CreateToken(new SecurityTokenDescriptor
         {
@@ -96,19 +109,6 @@ public class CryptoService : ICryptoProvider
         return payload;
     }
 
-    private SigningCredentials getSecurityKey()
-    {
-        var rsa = new RSACryptoServiceProvider();
-
-        rsa.ImportFromPem(privateKEY);
-
-        var signingCredentials = new SigningCredentials(new RsaSecurityKey(rsa), SecurityAlgorithms.RsaSha256)
-        {
-            CryptoProviderFactory = new CryptoProviderFactory { CacheSignatureProviders = false }
-        };
-
-        return signingCredentials;
-    }
 
     private IDictionary<string, object> RolesIntoClaim(ICollection<Role> roles)
     {

@@ -1,16 +1,19 @@
 using alimenta_bem.helpers;
 using alimenta_bem.db.context;
-using alimenta_bem.src.modules.user.useCases.authenticate.mapper;
+using alimenta_bem.src.providers.crypto;
+using alimenta_bem.src.modules.user.repository;
 using alimenta_bem.src.modules.user.useCases.authenticate.dto.request;
 using alimenta_bem.src.modules.user.useCases.authenticate.dto.response;
 using alimenta_bem.src.modules.user.useCases.authenticate.UseCase;
 
 namespace alimenta_bem.src.modules.user.useCases.authenticate.endPoint;
 
-public class UserAuthenticateEndPoint : Endpoint<UserAuthenticateRequest, UserAuthenticateResponse, UserAuthenticateMapper>
+public class UserAuthenticateEndPoint : Endpoint<UserAuthenticateRequest, UserAuthenticateResponse>
 {
     public AlimentaBemContext _context { get; init; }
+    public ICryptoProvider _crypto { get; init; }
     public Localizer _localizer { get; init; }
+    private IUserData _userData;
 
     public override void Configure()
     {
@@ -28,17 +31,27 @@ public class UserAuthenticateEndPoint : Endpoint<UserAuthenticateRequest, UserAu
     {
         try
         {
-            var userCreateUseCase = new UserAuthenticateUseCase(_context, _localizer);
+            var user = await GetUser(req);
 
-            var authenticate_user = await userCreateUseCase.exec(req);
+            var useCase = new UserAuthenticateUseCase(_localizer, _crypto);
 
-            var authenticated_user = Map.FromEntity(authenticate_user);
+            var tokens = useCase.exec(req, user);
 
-            await SendAsync(authenticated_user);
+            await SendAsync(tokens);
         }
         catch (Exception e)
         {
             ThrowError(e.Message);
         }
+    }
+    private async Task<User> GetUser(UserAuthenticateRequest req)
+    {
+        _userData = new UserData(_context);
+        var user = await _userData.ReadOneByEmail(req.email.Trim());
+
+        if (user is null)
+            throw new Exception(_localizer["user:LoginInvalid"]);
+
+        return user;
     }
 }

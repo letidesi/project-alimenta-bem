@@ -10,16 +10,11 @@ public enum Gender
     [Description("Masculino")]
     Masculino,
 
-    [Description("Mulher Transgênero")]
-    MulherTransgenero,
-    [Description("Homem Transgênero")]
-    HomemTransgenero,
-
     [Description("Pessoa Não-binária,")]
     PessoaNaoBinaria,
 
-    [Description("Outros,")]
-    Outros
+    [Description("Prefiro Não Dizer,")]
+    PrefiroNaoDizer
 }
 
 public enum SkinColor
@@ -36,6 +31,12 @@ public enum SkinColor
     [Description("Parda")]
     Parda,
 
-    [Description("Indígenas")]
-    Indigenas
+    [Description("Asiática")]
+    Asiatica,
+
+    [Description("Indígena")]
+    Indigena,
+
+    [Description("Prefiro Não Dizer,")]
+    PrefiroNaoDizer
 }

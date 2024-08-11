@@ -32,4 +32,14 @@ public class UserData : IUserData
 
         return user;
     }
+    public async Task<User?> ReadOne(Guid id)
+    {
+        var user = await _context.Users
+            .Include(u => u.roles)
+            .Where(u => u.id.Equals(id))
+            .Where(u => u.deletedAt.Equals(null))
+            .FirstOrDefaultAsync();
+
+        return user;
+    }
 }

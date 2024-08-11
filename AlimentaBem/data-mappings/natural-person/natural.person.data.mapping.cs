@@ -9,7 +9,8 @@ public class NaturalPersonMap : IEntityTypeConfiguration<NaturalPerson>
        {
               builder.HasOne(n => n.user)
                      .WithMany(u => u.naturalPersons)
-                     .HasForeignKey(n => n.userId);
+                     .HasForeignKey(n => n.userId)
+                     .OnDelete(DeleteBehavior.Cascade);
               builder.HasKey(n => n.id);
               builder.Property(n => n.firstName)
                      .HasColumnType("varchar(100)");
