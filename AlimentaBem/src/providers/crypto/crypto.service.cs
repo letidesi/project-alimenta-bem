@@ -39,9 +39,10 @@ public class CryptoService : ICryptoProvider
         identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Email, user.email));
         identityClaims.AddClaim(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
 
-        // set 
-        var roleClaims = RolesIntoClaim(user.roles);
-
+        foreach (var role in user.roles)
+        {
+            identityClaims.AddClaim(new Claim(ClaimTypes.Role, role.type));
+        }
 
         var signingCredentials = getSecurityKey();
 
@@ -51,7 +52,6 @@ public class CryptoService : ICryptoProvider
             Audience = "ABem",
             SigningCredentials = signingCredentials,
             Subject = identityClaims,
-            Claims = roleClaims,
             NotBefore = DateTime.UtcNow,
             Expires = DateTime.UtcNow.AddHours(1),
             IssuedAt = DateTime.UtcNow,
