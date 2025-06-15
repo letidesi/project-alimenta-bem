@@ -4,6 +4,7 @@ using alimenta_bem.src.modules.role.useCases.create.mapper;
 using alimenta_bem.src.modules.role.useCases.create.dto.request;
 using alimenta_bem.src.modules.role.useCases.create.dto.response;
 using alimenta_bem.src.modules.role.useCases.create.useCase;
+using alimenta_bem.src.modules.role.@enum;
 
 namespace alimenta_bem.src.modules.role.useCases.create.endPoint;
 
@@ -16,12 +17,12 @@ public class RoleCreateEndPoint : Endpoint<RoleCreateRequest, RoleCreateResponse
     {
         Post("role");
         Options(u => u.WithTags("role"));
+        Roles(EnumRole.Admin.ToString());
         Summary(s =>
         {
             s.Summary = "Create a new role";
             s.Description = "Register a role on the platform";
         });
-        AllowAnonymous();
     }
 
     public override async Task HandleAsync(RoleCreateRequest req, CancellationToken ct)
