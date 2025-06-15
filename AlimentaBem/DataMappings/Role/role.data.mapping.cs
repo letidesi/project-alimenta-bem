@@ -13,6 +13,7 @@ public class RoleMap : IEntityTypeConfiguration<Role>
               builder.HasKey(r => r.id);
               builder.Property(r => r.type)
                      .HasColumnType("varchar(100)")
+                     .HasConversion<string>()
                      .IsRequired(true);
        }
 }
