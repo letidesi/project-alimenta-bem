@@ -11,7 +11,7 @@ public class NaturalPersonCreateMapper : Mapper<NaturalPersonCreateRequest, Natu
 
     public override NaturalPerson ToEntity(NaturalPersonCreateRequest req) => new()
     {
-        userId = req.userId,
+        emailUser = req.emailUser,
         firstName = req.firstName,
         lastName = req.lastName,
         socialName = req.socialName,
@@ -25,7 +25,7 @@ public class NaturalPersonCreateMapper : Mapper<NaturalPersonCreateRequest, Natu
     public override NaturalPersonCreateResponse FromEntity(NaturalPerson n) => new()
     {
         id = n.id,
-        userId = n.userId,
+        emailUser = n.emailUser,
         firstName = n.firstName,
         lastName = n.lastName,
         socialName = n.socialName,

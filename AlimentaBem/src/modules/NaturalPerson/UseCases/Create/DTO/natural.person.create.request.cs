@@ -1,10 +1,8 @@
-using System.Security.Claims;
-
 namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
 
 public class NaturalPersonCreateRequest
 {
-    public Guid userId { get; set; }
+    public string emailUser { get; set; }
     public string firstName { get; set; }
     public string lastName { get; set; }
     public string? socialName { get; set; }

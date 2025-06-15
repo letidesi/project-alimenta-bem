@@ -1,5 +1,6 @@
 using alimenta_bem.helpers;
 using alimenta_bem.db.context;
+using alimenta_bem.src.modules.user.repository;
 
 namespace alimenta_bem.src.natural.person.repository;
 
@@ -22,6 +23,12 @@ public class NaturalPersonData : INaturalPersonData
 
         return naturalPerson;
     }
+
+    public Task<User?> GetUserByEmail(string email)
+    {
+        return _context.Users.Where(u => u.email == email).FirstOrDefaultAsync();
+    }
+
     public async Task<bool> CheckNaturalPersonAlreadyExistsWithSameUser(NaturalPerson naturalPerson)
     {
         return await _context.NaturalPersons.AnyAsync(n => n.userId == naturalPerson.userId);

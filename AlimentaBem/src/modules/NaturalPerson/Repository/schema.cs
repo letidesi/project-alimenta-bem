@@ -11,6 +11,7 @@ public class NaturalPerson : BaseEntity
     public Guid userId { get; set; }
     public User? user { get; set; }
     public string firstName { get; set; }
+    public string emailUser { get; set; }
     public string lastName { get; set; }
     public string? socialName { get; set; }
     public string age { get; set; }

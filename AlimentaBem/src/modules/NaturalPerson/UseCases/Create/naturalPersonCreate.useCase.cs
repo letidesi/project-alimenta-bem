@@ -23,6 +23,13 @@ public class NaturalPersonCreateUseCase
         _validateNaturalPersonData.ValidateNaturalPersonFields(naturalPerson);
         await _validateNaturalPersonData.ExistDataOfNaturalPerson(naturalPerson);
 
+        var user = await _naturalPersonData.GetUserByEmail(naturalPerson.emailUser);
+        if (user is null)
+            throw new Exception(_localizer["naturalPerson:UserNotFound"]);
+
+        naturalPerson.userId = user.id;
+        naturalPerson.user = user;
+
         var createNaturalPerson = await _naturalPersonData.Create(naturalPerson);
         if (createNaturalPerson is null)
             throw new Exception(_localizer["naturalPerson:IndividualCreationFailed"]);
