@@ -4,6 +4,7 @@ using alimenta.bem.src.modules.organization.useCases.create.mapper;
 using alimenta_bem.src.modules.organization.useCases.create.dto.request;
 using alimenta_bem.src.modules.organization.useCases.create.dto.response;
 using alimenta_bem.src.modules.organization.useCases.create.useCase;
+using alimenta_bem.src.modules.role.@enum;
 
 namespace alimenta_bem.src.modules.organization.useCases.create.endpoint;
 
@@ -16,12 +17,12 @@ public class OrganizationEndPoint : Endpoint<OrganizationCreateRequest, Organiza
     {
         Post("organization");
         Options(n => n.WithTags("organization"));
+        Roles(EnumRole.Admin.ToString());
         Summary(s =>
         {
             s.Summary = "Create a new organization";
             s.Description = "Register a organization on the platform";
         });
-        AllowAnonymous(); 
     }
 
     public override async Task HandleAsync(OrganizationCreateRequest req, CancellationToken ct)
