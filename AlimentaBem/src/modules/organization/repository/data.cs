@@ -22,4 +22,15 @@ public class OrganizationData : IOrganizationData
 
         return organization;
     }
+
+    public Task<List<Organization>> ReadList()
+    {
+        return _context.Organizations
+            .Select(o => new Organization
+            {
+                id = o.id,
+                name = o.name,
+            })
+            .ToListAsync();
+    }
 }

@@ -11,7 +11,8 @@ public class NaturalPersonMap : IEntityTypeConfiguration<Organization>
               builder.Property(o => o.name)
                      .HasColumnType("varchar(150)");
               builder.Property(o => o.type)
-                     .HasColumnType("varchar(40)");
+                     .HasColumnType("varchar(40)")
+                     .HasConversion<string>();
               builder.Property(o => o.description)
                      .HasColumnType("varchar(500)");
        }
