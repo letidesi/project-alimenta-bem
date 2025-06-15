@@ -29,6 +29,11 @@ public class NaturalPersonData : INaturalPersonData
         return _context.Users.Where(u => u.email == email).FirstOrDefaultAsync();
     }
 
+    public async Task<List<NaturalPerson>> ReadList()
+    {
+        return await _context.NaturalPersons.ToListAsync();
+    }
+
     public async Task<bool> CheckNaturalPersonAlreadyExistsWithSameUser(NaturalPerson naturalPerson)
     {
         return await _context.NaturalPersons.AnyAsync(n => n.userId == naturalPerson.userId);
