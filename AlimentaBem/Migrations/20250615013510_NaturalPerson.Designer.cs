@@ -12,8 +12,8 @@ using alimenta_bem.db.context;
 namespace alimenta_bem.Migrations
 {
     [DbContext(typeof(AlimentaBemContext))]
-    [Migration("20240810215209_NaturalPersonChanges")]
-    partial class NaturalPersonChanges
+    [Migration("20250615013510_NaturalPerson")]
+    partial class NaturalPerson
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -141,6 +141,10 @@ namespace alimenta_bem.Migrations
 
                     b.Property<DateTimeOffset?>("deletedAt")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("emailUser")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("firstName")
                         .IsRequired()

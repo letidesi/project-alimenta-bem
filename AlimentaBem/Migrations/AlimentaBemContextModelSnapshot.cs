@@ -139,6 +139,10 @@ namespace alimenta_bem.Migrations
                     b.Property<DateTimeOffset?>("deletedAt")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<string>("emailUser")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("firstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
