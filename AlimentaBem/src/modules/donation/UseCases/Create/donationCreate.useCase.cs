@@ -14,12 +14,12 @@ public class DonationCreateUseCase
         _donationData = new DonationData(context);
     }
 
-    public async Task<Donation> exec(Donation naturalPerson)
+    public async Task<Donation> exec(Donation donation)
     {
-        var donation = await _donationData.Create(naturalPerson);
-        if (donation is null)
+        var createDonation = await _donationData.Create(donation);
+        if (createDonation is null)
             throw new Exception(_localizer["donation:IndividualCreationFailed"]);
 
-        return donation;
+        return createDonation;
     }
 }

@@ -10,19 +10,19 @@ public class Validator : Validator<DonationCreateRequest>
         var _localizer = localizer;
 
         RuleFor(request => request.naturalPersonId)
-         .NotEmpty()
-         .WithMessage(_localizer["naturalPerson:NaturalPersonIdRequired"]);
+            .NotEmpty()
+            .WithMessage(_localizer["naturalPerson:NaturalPersonIdRequired"]);
 
         RuleFor(request => request.organizationId)
-         .NotEmpty()
-         .WithMessage(_localizer["organization:OrganizationIdRequired"]);
+            .NotEmpty()
+            .WithMessage(_localizer["organization:OrganizationIdRequired"]);
 
         RuleFor(request => request.itemName)
-         .NotEmpty()
-         .WithMessage(_localizer["donation:ItemNameRequired"]);
+            .NotEmpty()
+            .WithMessage(_localizer["donation:ItemNameRequired"]);
 
         RuleFor(request => request.amountDonated)
-         .NotEmpty()
-         .WithMessage(_localizer["donation:AmountDonatedRequired"]);
+            .NotEmpty()
+            .WithMessage(_localizer["donation:AmountDonatedRequired"]);
     }
 }
