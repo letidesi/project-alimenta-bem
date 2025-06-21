@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using alimenta_bem.db.context;
 
@@ -11,9 +12,11 @@ using alimenta_bem.db.context;
 namespace alimenta_bem.Migrations
 {
     [DbContext(typeof(AlimentaBemContext))]
-    partial class AlimentaBemContextModelSnapshot : ModelSnapshot
+    [Migration("20250621182629_NaturalPersonFullName")]
+    partial class NaturalPersonFullName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
