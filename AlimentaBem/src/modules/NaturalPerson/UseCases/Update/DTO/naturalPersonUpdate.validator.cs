@@ -1,21 +1,17 @@
 using alimenta_bem.helpers;
-using alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
+using alimenta_bem.src.modules.natural.person.useCases.update.dto.request;
 
-namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.validator;
+namespace alimenta_bem.src.modules.natural.person.useCases.update.dto.validator;
 
-public class Validator : Validator<NaturalPersonCreateRequest>
+public class Validator : Validator<NaturalPersonUpdateRequest>
 {
     public Validator(Localizer localizer)
     {
         var _localizer = localizer;
 
-        RuleFor(request => request.firstName)
+        RuleFor(request => request.name)
          .NotEmpty()
-         .WithMessage(_localizer["naturalPerson:FirstNameRequired"]);
-
-        RuleFor(request => request.lastName)
-         .NotEmpty()
-         .WithMessage(_localizer["naturalPerson:LastNameRequired"]);
+         .WithMessage(_localizer["naturalPerson:nameRequired"]);
 
         RuleFor(request => request.age)
          .NotEmpty()

@@ -1,19 +1,19 @@
 using alimenta_bem.src.natural.person.repository;
-using alimenta_bem.src.modules.natural.person.useCases.create.dto.request;
-using alimenta_bem.src.modules.natural.person.useCases.create.dto.response;
+using alimenta_bem.src.modules.natural.person.useCases.update.dto.request;
+using alimenta_bem.src.modules.natural.person.useCases.update.dto.response;
 using alimenta_bem.helpers;
 using alimenta_bem.src.natural.person.@enum;
 
-namespace alimenta.bem.src.modules.natural.person.useCases.create.mapper;
+namespace alimenta.bem.src.modules.natural.person.useCases.update.mapper;
 
-public class NaturalPersonCreateMapper : Mapper<NaturalPersonCreateRequest, NaturalPersonCreateResponse, NaturalPerson>
+public class NaturalPersonUpdateMapper : Mapper<NaturalPersonUpdateRequest, NaturalPersonUpdateResponse, NaturalPerson>
 {
 
-    public override NaturalPerson ToEntity(NaturalPersonCreateRequest req) => new()
+    public override NaturalPerson ToEntity(NaturalPersonUpdateRequest req) => new()
     {
-        emailUser = req.emailUser,
-        firstName = req.firstName,
-        lastName = req.lastName,
+        userId = req.userId,
+        emailUser = req.email,
+        name = req.name,
         socialName = req.socialName,
         age = req.age,
         birthdayDate = req.birthdayDate,
@@ -22,12 +22,11 @@ public class NaturalPersonCreateMapper : Mapper<NaturalPersonCreateRequest, Natu
         isPcd = req.isPcd
     };
 
-    public override NaturalPersonCreateResponse FromEntity(NaturalPerson n) => new()
+    public override NaturalPersonUpdateResponse FromEntity(NaturalPerson n) => new()
     {
         id = n.id,
         emailUser = n.emailUser,
-        firstName = n.firstName,
-        lastName = n.lastName,
+        name = n.name,
         socialName = n.socialName,
         age = n.age,
         birthdayDate = n.birthdayDate,
