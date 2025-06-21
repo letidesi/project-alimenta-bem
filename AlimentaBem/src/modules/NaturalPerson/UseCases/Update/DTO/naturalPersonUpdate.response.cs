@@ -1,11 +1,10 @@
 using alimenta.bem.entity.metadata;
 
-namespace alimenta_bem.src.modules.natural.person.useCases.create.dto.response;
+namespace alimenta_bem.src.modules.natural.person.useCases.update.dto.response;
 
-public class NaturalPersonCreateResponse : BaseEntity
+public class NaturalPersonUpdateResponse : BaseEntity
 {
-    public string firstName { get; set; }
-    public string lastName { get; set; }
+    public string name { get; set; }
     public string? socialName { get; set; }
     public string emailUser { get; set; }
     public string age { get; set; }
