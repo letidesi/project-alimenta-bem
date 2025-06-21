@@ -6,6 +6,8 @@ public interface INaturalPersonData
 {
     Task<User?> GetUserByEmail(string email);
     Task<NaturalPerson> Create(NaturalPerson naturalPerson);
+    Task<NaturalPerson> Update(NaturalPerson naturalPerson);
     Task<List<NaturalPerson>> ReadList();
-    Task<bool> CheckNaturalPersonAlreadyExistsWithSameUser(NaturalPerson naturalPerson);
+    Task<NaturalPerson> ReadNaturalPersonByUser(Guid userId);
+    Task<NaturalPerson> CheckNaturalPersonAlreadyExist(NaturalPerson naturalPerson);
 }

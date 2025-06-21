@@ -17,14 +17,14 @@ public class ValidateNaturalPersonData
     }
     public void ValidateNaturalPersonFields(NaturalPerson naturalPerson)
     {
-        naturalPerson.firstName = naturalPerson.firstName.Trim();
-        naturalPerson.lastName = naturalPerson.lastName.Trim();
-
+        naturalPerson.name = naturalPerson.name.Trim();
+        
         ValidateDateOfBirth(naturalPerson.birthdayDate);
 
         if (naturalPerson.socialName is not null)
             naturalPerson.socialName = naturalPerson.socialName.Trim();
     }
+
     public async Task ExistDataOfNaturalPerson(NaturalPerson naturalPerson)
     {
         var existingNaturalPerson = await _naturalPersonData.CheckNaturalPersonAlreadyExistsWithSameUser(naturalPerson);

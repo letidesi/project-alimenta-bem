@@ -10,9 +10,8 @@ public class NaturalPerson : BaseEntity
     public virtual ICollection<Donation>? donations { get; set; }
     public Guid userId { get; set; }
     public User? user { get; set; }
-    public string firstName { get; set; }
+    public string name { get; set; }
     public string emailUser { get; set; }
-    public string lastName { get; set; }
     public string? socialName { get; set; }
     public string age { get; set; }
     public DateOnly birthdayDate { get; set; }

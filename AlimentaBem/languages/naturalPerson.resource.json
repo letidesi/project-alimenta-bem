@@ -7,10 +7,10 @@
         }
     },
     {
-        "Key": "FirstNameRequired",
+        "Key": "nameRequired",
         "LocalizedValues": {
-            "en-US": "The parameter \"FirstName\" is required.",
-            "pt-BR": "O parâmetro \"FirstName\" é obrigatório."
+            "en-US": "The parameter \"name\" is required.",
+            "pt-BR": "O parâmetro \"name\" é obrigatório."
         }
     },
     {

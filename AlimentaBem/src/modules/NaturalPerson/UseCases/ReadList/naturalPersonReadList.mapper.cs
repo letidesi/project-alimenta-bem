@@ -10,7 +10,7 @@ public class NaturalPersonReadListMapper : ResponseMapper<NaturalPersonReadListR
         naturalPersons = list.Select(n => new NaturalPersonReadListResponse.NaturalPersonReadListItem()
         {
             id = n.id,
-            name = $"{n.firstName} {n.lastName}"
+            name = n.name
         }).ToList()
     };
 }
